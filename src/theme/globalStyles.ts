@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   *,
   *::before,
   ::after {
@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-family: ${({ theme }) => theme.fonts.body};
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.secondary};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

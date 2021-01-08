@@ -3,10 +3,20 @@ import 'styled-components'
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
-      [key: string]: string
+      border: string
+      sidebar: string
+      primary: string
+      secondary: string
+      section: string
+      contrast: {
+        full: string
+        half: string
+      }
+      navbar: string
     }
     fonts: {
-      [key: string]: string
+      heading: string
+      body: string
     }
   }
 }

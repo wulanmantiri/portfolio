@@ -1,16 +1,21 @@
 import React, { ReactElement } from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import { Row, Center, SpacedRow } from 'components/styled'
+import { Row, Center } from 'components/styled'
+import { useWindow } from 'hooks'
+import { NavItem } from './NavItem'
+import DesktopNavbar from './DesktopNavbar'
+import MobileNavbar from './MobileNavbar'
 
 const FixedContainer = styled(Center)`
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 9;
   width: 100%;
   height: calc(3rem + 0.5vw);
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+  background-color: ${({ theme }) => theme.colors.navbar};
+  backdrop-filter: blur(5px);
 `
 
 const NavContainer = styled(Row)`
@@ -18,35 +23,30 @@ const NavContainer = styled(Row)`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: 800px) {
+  @media (max-width: 600px) {
     width: 90%;
   }
-`
-
-const NavItem = styled(Link)`
-  text-decoration: none;
-  color: ${({ theme }) => theme.colors.text};
-  font-weight: 600;
 `
 
 const Logo = styled.p`
   font-family: ${({ theme }) => theme.fonts.heading};
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: calc(1.3rem + 0.2vw);
 `
 
-const Navbar = (): ReactElement => (
-  <FixedContainer>
-    <NavContainer>
-      <NavItem to="/">
-        <Logo>wulan mantiri</Logo>
-      </NavItem>
-      <SpacedRow spacing="2rem">
-        <NavItem to="/#experiences">Experiences</NavItem>
-        <NavItem to="/#projects">Projects</NavItem>
-      </SpacedRow>
-    </NavContainer>
-  </FixedContainer>
-)
+const Navbar = (): ReactElement => {
+  const { isMobile } = useWindow()
+
+  return (
+    <FixedContainer>
+      <NavContainer>
+        <NavItem to="/">
+          <Logo>wulan mantiri</Logo>
+        </NavItem>
+        {isMobile ? <MobileNavbar /> : <DesktopNavbar />}
+      </NavContainer>
+    </FixedContainer>
+  )
+}
 
 export default Navbar

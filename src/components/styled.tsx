@@ -8,9 +8,9 @@ const Flex = styled.div<{
   width?: string
 }>`
   display: flex;
-  align-items: ${({ align }) => (align ? align : 'flex-start')};
-  justify-content: ${({ justify }) => (justify ? justify : 'flex-start')};
-  width: ${({ width }) => (width ? width : 'auto')};
+  align-items: ${({ align }) => align || 'flex-start'};
+  justify-content: ${({ justify }) => justify || 'flex-start'};
+  width: ${({ width }) => width || 'auto'};
 `
 
 const Row = styled(Flex)`
@@ -21,7 +21,7 @@ const SpacedRow = styled(Row)<{
   spacing?: string
 }>`
   > *:not(style) ~ *:not(style) {
-    margin-left: ${({ spacing }) => (spacing ? spacing : '0.5rem')};
+    margin-left: ${({ spacing }) => spacing || '0.5rem'};
     margin-top: 0;
   }
 `
@@ -34,7 +34,7 @@ const SpacedColumn = styled(Column)<{
   spacing?: string
 }>`
   > *:not(style) ~ *:not(style) {
-    margin-top: ${({ spacing }) => (spacing ? spacing : '0.5rem')};
+    margin-top: ${({ spacing }) => spacing || '0.5rem'};
     margin-left: 0;
   }
 `

@@ -8,10 +8,8 @@ declare module 'styled-components' {
       primary: string
       secondary: string
       section: string
-      contrast: {
-        full: string
-        half: string
-      }
+      contrast: string
+      settings: string
       navbar: string
     }
     fonts: {

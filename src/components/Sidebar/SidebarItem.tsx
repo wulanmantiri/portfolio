@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import { HashLink } from 'react-router-hash-link'
 
 import { Center } from 'components/styled'
-import { MouseRef } from 'hooks/useMouseRef'
 
 type Props = {
   to: string
-  containerRef: MouseRef
+  active: boolean
+  onClick: VoidFunction
   children: string
 }
 
@@ -31,12 +31,17 @@ const StyledLink = styled(HashLink)`
   color: ${({ theme }) => theme.colors.sidebar};
 `
 
-const SidebarItem = ({ to, containerRef, children }: Props): ReactElement => (
+const SidebarItem = ({
+  to,
+  active,
+  onClick,
+  children,
+}: Props): ReactElement => (
   <Center>
-    <StyledLink smooth to={to} onClick={containerRef.scrollToElement}>
+    <StyledLink smooth to={to} onClick={onClick}>
       {children}
     </StyledLink>
-    <Separator active={containerRef.active} />
+    <Separator active={active} />
   </Center>
 )
 

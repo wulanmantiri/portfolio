@@ -2,13 +2,11 @@ import React, { ReactElement } from 'react'
 import styled from 'styled-components'
 
 import { MouseRef } from 'hooks/useMouseRef'
+import { LANDING_PAGE_SECTIONS } from 'constants/section'
 import { SidebarItem } from './SidebarItem'
 
 type Props = {
-  sections: {
-    path: string
-    ref: MouseRef
-  }[]
+  mouseRef: MouseRef
 }
 
 const Container = styled.div`
@@ -18,10 +16,15 @@ const Container = styled.div`
   z-index: 9;
 `
 
-const Sidebar = ({ sections }: Props): ReactElement => (
+const Sidebar = ({ mouseRef }: Props): ReactElement => (
   <Container>
-    {sections.map(({ path, ref }, i) => (
-      <SidebarItem key={`sidenav${i + 1}`} to={path} containerRef={ref}>
+    {LANDING_PAGE_SECTIONS.map(({ path }, i) => (
+      <SidebarItem
+        key={`sidenav${i + 1}`}
+        to={path}
+        active={mouseRef.active[i]}
+        onClick={() => mouseRef.scrollToElement(i)}
+      >
         {`0${i + 1}`}
       </SidebarItem>
     ))}

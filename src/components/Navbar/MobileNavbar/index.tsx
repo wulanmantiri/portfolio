@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { SpacedColumn } from 'components/styled'
 import { TripleLineIcon } from 'components'
-import { SECTIONS } from 'constants/section'
+import { NAV_ITEMS } from 'constants/section'
 import { NavItem } from '../NavItem'
 
 const PopupContainer = styled.div`
@@ -31,7 +31,7 @@ const MobileNavbar = (): ReactElement => {
       {opened && (
         <PopupContainer>
           <NavContainer>
-            {SECTIONS.map(({ path, label }, id) => (
+            {NAV_ITEMS.map(({ path, label }, id) => (
               <NavItem key={'nav' + id} to={path}>
                 {label}
               </NavItem>

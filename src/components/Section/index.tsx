@@ -1,4 +1,4 @@
-import React, { ReactElement, RefObject } from 'react'
+import React, { ReactElement } from 'react'
 import styled from 'styled-components'
 
 import { Column } from 'components/styled'
@@ -6,9 +6,8 @@ import { ChildrenProps } from 'types'
 
 interface Props extends ChildrenProps {
   bgColor: string
-  id: string
-  title?: string
-  containerRef: RefObject<HTMLDivElement>
+  label?: string | null
+  containerRef: (el: HTMLDivElement) => HTMLDivElement
 }
 
 const Container = styled(Column)<{
@@ -38,13 +37,16 @@ const Content = styled.div`
 
 const Section = ({
   bgColor,
-  id,
-  title,
+  label,
   containerRef,
   children,
 }: Props): ReactElement => (
-  <Container bgColor={bgColor} ref={containerRef} id={id}>
-    {title && <Heading>{title}</Heading>}
+  <Container
+    bgColor={bgColor}
+    ref={containerRef}
+    id={label ? label.toLowerCase() : ''}
+  >
+    {label && <Heading>{label}</Heading>}
     <Content>{children}</Content>
   </Container>
 )

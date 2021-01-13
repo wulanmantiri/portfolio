@@ -1,4 +1,4 @@
-const SECTIONS = [
+const NAV_ITEMS = [
   {
     path: '/#experiences',
     label: 'Experiences',
@@ -7,6 +7,18 @@ const SECTIONS = [
     path: '/#projects',
     label: 'Projects',
   },
+  {
+    path: '/#contact',
+    label: 'Contact',
+  },
 ]
 
-export { SECTIONS }
+const LANDING_PAGE_SECTIONS = [
+  {
+    path: '/',
+    label: null,
+  },
+  ...NAV_ITEMS,
+]
+
+export { NAV_ITEMS, LANDING_PAGE_SECTIONS }

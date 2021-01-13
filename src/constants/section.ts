@@ -9,12 +9,4 @@ const SECTIONS = [
   },
 ]
 
-const SIDEBAR_SECTIONS = [
-  {
-    path: '/',
-    label: 'Wulan Mantiri',
-  },
-  ...SECTIONS,
-]
-
-export { SECTIONS, SIDEBAR_SECTIONS }
+export { SECTIONS }

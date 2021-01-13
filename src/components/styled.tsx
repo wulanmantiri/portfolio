@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export { Row, SpacedRow, Column, SpacedColumn, Center }
+export { Row, SpacedRow, Column, SpacedColumn, Center, Wrap }
 
 const Flex = styled.div<{
   align?: string
@@ -43,4 +43,11 @@ const Center = styled(Column)`
   justify-content: center;
   align-items: center;
   height: 100%;
+`
+
+const Wrap = styled(Flex)<{
+  spacing?: string
+}>`
+  flex-wrap: wrap;
+  justify-content: space-between;
 `

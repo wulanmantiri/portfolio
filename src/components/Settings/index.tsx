@@ -13,7 +13,7 @@ const FixedContainer = styled.div`
 `
 
 const StyledBox = styled(Center)`
-  background-color: ${({ theme }) => theme.colors.settings};
+  background-color: ${({ theme }) => theme.colors.border};
   width: 35px;
   height: 35px;
   border-radius: 0.5rem;
@@ -42,8 +42,7 @@ const Option = styled.div<{
 }>`
   cursor: pointer;
   color: white;
-  background-color: ${({ theme, selected }) =>
-    selected ? 'black' : 'transparent'};
+  background-color: ${({ selected }) => (selected ? 'black' : 'transparent')};
   border-radius: 0.5rem;
   width: 5rem;
   text-align: center;

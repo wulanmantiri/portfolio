@@ -20,11 +20,15 @@ const Container = styled(Column)<{
 `
 
 const Heading = styled.h1`
-  margin: 2rem 0 calc(2rem + 2vw);
+  margin: 2rem 0 4rem;
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.heading};
   font-weight: 500;
   font-size: calc(2rem + 1.5vw);
+
+  @media (max-width: 600px) {
+    margin-bottom: 3rem;
+  }
 `
 
 const Content = styled.div`

@@ -6,7 +6,7 @@ const colors = {
   sidebar: '#7F7F7F',
   primary: '#000000',
   secondary: '#F7F7F7',
-  section: '#151515',
+  section: '#060606',
   contrast: '#FFFFFF',
   settings: '#292929',
   navbar: 'rgba(10, 10, 10, 0.6)',

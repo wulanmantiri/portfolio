@@ -7,11 +7,13 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    line-height: 1.1;
   }
 
   body {
     margin: 0;
     font-family: ${({ theme }) => theme.fonts.body};
+    font-size: 1em;
     color: ${({ theme }) => theme.colors.secondary};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

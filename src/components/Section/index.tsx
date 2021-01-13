@@ -6,7 +6,8 @@ import { ChildrenProps } from 'types'
 
 interface Props extends ChildrenProps {
   bgColor: string
-  title?: string
+  label?: string | null
+  containerRef: (el: HTMLDivElement) => HTMLDivElement
 }
 
 const Container = styled(Column)<{
@@ -19,11 +20,11 @@ const Container = styled(Column)<{
 `
 
 const Heading = styled.h1`
-  margin: 1rem 0 calc(1rem + 2vw);
+  margin: 2rem 0 calc(2rem + 2vw);
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.heading};
   font-weight: 500;
-  font-size: calc(2rem + 1vw);
+  font-size: calc(2rem + 1.5vw);
 `
 
 const Content = styled.div`
@@ -34,9 +35,18 @@ const Content = styled.div`
   }
 `
 
-const Section = ({ bgColor, title, children }: Props): ReactElement => (
-  <Container bgColor={bgColor}>
-    {title && <Heading>{title}</Heading>}
+const Section = ({
+  bgColor,
+  label,
+  containerRef,
+  children,
+}: Props): ReactElement => (
+  <Container
+    bgColor={bgColor}
+    ref={containerRef}
+    id={label ? label.toLowerCase() : ''}
+  >
+    {label && <Heading>{label}</Heading>}
     <Content>{children}</Content>
   </Container>
 )

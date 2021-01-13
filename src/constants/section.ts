@@ -1,4 +1,4 @@
-const SECTIONS = [
+const NAV_ITEMS = [
   {
     path: '/#experiences',
     label: 'Experiences',
@@ -7,14 +7,18 @@ const SECTIONS = [
     path: '/#projects',
     label: 'Projects',
   },
+  {
+    path: '/#contact',
+    label: 'Contact',
+  },
 ]
 
-const SIDEBAR_SECTIONS = [
+const LANDING_PAGE_SECTIONS = [
   {
     path: '/',
-    label: 'Wulan Mantiri',
+    label: null,
   },
-  ...SECTIONS,
+  ...NAV_ITEMS,
 ]
 
-export { SECTIONS, SIDEBAR_SECTIONS }
+export { NAV_ITEMS, LANDING_PAGE_SECTIONS }

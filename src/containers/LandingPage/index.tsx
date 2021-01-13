@@ -2,29 +2,38 @@ import React, { ReactElement, useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 
 import { Layout, Section, Sidebar } from 'components'
-import { useWindow } from 'hooks'
+import { useWindow, useMouseRef } from 'hooks'
+import { LANDING_PAGE_SECTIONS } from 'constants/section'
 
 const LandingPage = (): ReactElement => {
   const theme = useContext(ThemeContext)
+  const { primary, section } = theme.colors
+
   const { isMobile } = useWindow()
 
-  const { primary, section } = theme.colors
+  const mouseRef = useMouseRef(LANDING_PAGE_SECTIONS)
+
+  const sectionBgColor = (idx: number) => {
+    return idx % 2 === 0 ? section : primary
+  }
 
   return (
     <Layout>
-      {isMobile ? <></> : <Sidebar />}
-      <Section bgColor={primary}>
-        <div>hello</div>
-      </Section>
-      <Section bgColor={section} title="Experiences">
-        <div>hello</div>
-      </Section>
-      <Section bgColor={primary} title="Projects">
-        <div>hello</div>
-      </Section>
-      <Section bgColor={section}>
-        <div>hello</div>
-      </Section>
+      {isMobile ? <></> : <Sidebar mouseRef={mouseRef} />}
+      <>
+        {LANDING_PAGE_SECTIONS.map(({ label }, idx) => (
+          <Section
+            bgColor={sectionBgColor(idx)}
+            containerRef={(el: HTMLDivElement) =>
+              (mouseRef.refs.current[idx] = el)
+            }
+            label={label}
+            key={idx}
+          >
+            <div>hello</div>
+          </Section>
+        ))}
+      </>
     </Layout>
   )
 }

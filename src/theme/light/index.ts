@@ -7,10 +7,8 @@ const colors = {
   primary: '#FFFFFF',
   secondary: '#1D1D1F',
   section: '#F7F7F7',
-  contrast: {
-    full: '#000000',
-    half: '#292929',
-  },
+  contrast: '#000000',
+  settings: '#292929',
   navbar: 'rgba(254, 254, 254, 0.6)',
 }
 

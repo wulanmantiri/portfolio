@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, RefObject } from 'react'
 import styled from 'styled-components'
 
 import { Column } from 'components/styled'
@@ -6,7 +6,9 @@ import { ChildrenProps } from 'types'
 
 interface Props extends ChildrenProps {
   bgColor: string
+  id: string
   title?: string
+  containerRef: RefObject<HTMLDivElement>
 }
 
 const Container = styled(Column)<{
@@ -19,11 +21,11 @@ const Container = styled(Column)<{
 `
 
 const Heading = styled.h1`
-  margin: 1rem 0 calc(1rem + 2vw);
+  margin: 2rem 0 calc(2rem + 2vw);
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.heading};
   font-weight: 500;
-  font-size: calc(2rem + 1vw);
+  font-size: calc(2rem + 1.5vw);
 `
 
 const Content = styled.div`
@@ -34,8 +36,14 @@ const Content = styled.div`
   }
 `
 
-const Section = ({ bgColor, title, children }: Props): ReactElement => (
-  <Container bgColor={bgColor}>
+const Section = ({
+  bgColor,
+  id,
+  title,
+  containerRef,
+  children,
+}: Props): ReactElement => (
+  <Container bgColor={bgColor} ref={containerRef} id={id}>
     {title && <Heading>{title}</Heading>}
     <Content>{children}</Content>
   </Container>

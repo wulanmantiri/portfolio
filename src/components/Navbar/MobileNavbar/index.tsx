@@ -32,7 +32,11 @@ const MobileNavbar = (): ReactElement => {
         <PopupContainer>
           <NavContainer>
             {NAV_ITEMS.map(({ path, label }, id) => (
-              <NavItem key={'nav' + id} to={path}>
+              <NavItem
+                key={`nav${id}`}
+                to={path}
+                onClick={() => setOpened(false)}
+              >
                 {label}
               </NavItem>
             ))}

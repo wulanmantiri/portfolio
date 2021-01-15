@@ -15,12 +15,10 @@ type Props = {
   }[]
 }
 
-const Container = styled.a`
+const Container = styled.div`
   position: relative;
-  width: 33rem;
-  text-decoration: none;
-  color: ${({ theme }) => theme.colors.secondary};
-  margin-bottom: 4.5rem;
+  width: 45%;
+  margin-bottom: 4rem;
 
   @media (max-width: 800px) {
     width: 100%;
@@ -39,12 +37,9 @@ const ProjectImage = styled.img<{
   object-fit: cover;
   border-radius: 0.5rem;
 
-  @media (max-width: 600px) {
-    transform: translate(0, -0.2rem);
-  }
   @media (min-width: 600px) {
     transition: 0.5s;
-    transform: ${({ hovered }) => (hovered ? 'translate(0, -4rem)' : '0')};
+    transform: ${({ hovered }) => (hovered ? 'translate(0, -3.8rem)' : '0')};
   }
 `
 
@@ -53,7 +48,7 @@ const Placeholder = styled(SpacedColumn)`
   z-index: 1;
   bottom: 0;
   width: 100%;
-  padding: 0 0.2rem;
+  padding: 0.2rem 0.2rem 0;
 
   @media (max-width: 600px) {
     position: relative;

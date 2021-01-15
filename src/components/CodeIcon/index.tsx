@@ -1,6 +1,5 @@
 import React, { ReactElement, useContext } from 'react'
-import { ThemeContext } from 'styled-components'
-import styled from 'styled-components'
+import styled, { ThemeContext } from 'styled-components'
 
 import { Center } from 'components/styled'
 
@@ -13,8 +12,8 @@ const StyledIcon = styled(Center)<{
   size?: number
 }>`
   background-color: ${({ theme }) => theme.colors.border};
-  width: ${({ size }) => size || '25'}px;
-  height: ${({ size }) => size || '25'}px;
+  width: ${({ size }) => size || '22'}px;
+  height: ${({ size }) => size || '22'}px;
   border-radius: 50%;
 `
 

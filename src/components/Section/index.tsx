@@ -14,13 +14,12 @@ const Container = styled(Column)<{
   bgColor: string
 }>`
   align-items: center;
-  padding-top: calc(4rem + 1vw);
-  min-height: 100vh;
+  padding: calc(5rem + 1vw) 0 calc(3rem + 1vw);
   background-color: ${({ bgColor }) => bgColor};
 `
 
 const Heading = styled.h1`
-  margin: 2rem 0 4rem;
+  margin-bottom: calc(2rem + 2vw);
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.heading};
   font-weight: 500;

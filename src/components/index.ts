@@ -1,4 +1,5 @@
 export { default as CodeIcon } from './CodeIcon'
+export { default as ExperienceUnit } from './ExperienceUnit'
 export { default as Layout } from './Layout'
 export { default as Navbar } from './Navbar'
 export { default as ProjectCard } from './ProjectCard'

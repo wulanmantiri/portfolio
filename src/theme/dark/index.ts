@@ -9,6 +9,7 @@ const colors = {
   section: '#060606',
   contrast: '#FFFFFF',
   settings: '#292929',
+  blue: '#1984EA',
   navbar: 'rgba(10, 10, 10, 0.6)',
 }
 

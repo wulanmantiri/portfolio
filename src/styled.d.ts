@@ -10,6 +10,7 @@ declare module 'styled-components' {
       section: string
       contrast: string
       settings: string
+      blue: string
       navbar: string
     }
     fonts: {

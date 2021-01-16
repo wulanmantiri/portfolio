@@ -1,17 +1,10 @@
 import React, { ReactElement } from 'react'
 import styled from 'styled-components'
 
+import { Experience as Props } from 'models/experience'
 import { TimeText } from './TimeText'
 import { Content } from './Content'
 import { Separator } from './Separator'
-
-type Props = {
-  title: string
-  time: string
-  place: string
-  descriptions?: string[]
-  type?: string
-}
 
 const Row = styled.div<{
   justify?: string

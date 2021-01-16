@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import styled from 'styled-components'
 
 import { MouseRef } from 'hooks/useMouseRef'
-import { LANDING_PAGE_SECTIONS } from 'constants/section'
+import { SIDEBAR_ITEMS } from 'constants/section'
 import { SidebarItem } from './SidebarItem'
 
 type Props = {
@@ -18,7 +18,7 @@ const Container = styled.div`
 
 const Sidebar = ({ mouseRef }: Props): ReactElement => (
   <Container>
-    {LANDING_PAGE_SECTIONS.map(({ path }, i) => (
+    {SIDEBAR_ITEMS.map(({ path }, i) => (
       <SidebarItem
         key={`sidenav${i + 1}`}
         to={path}

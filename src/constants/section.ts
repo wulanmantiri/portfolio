@@ -13,12 +13,11 @@ const NAV_ITEMS = [
   },
 ]
 
-const LANDING_PAGE_SECTIONS = [
+const SIDEBAR_ITEMS = [
   {
     path: '/',
-    label: null,
   },
   ...NAV_ITEMS,
 ]
 
-export { NAV_ITEMS, LANDING_PAGE_SECTIONS }
+export { NAV_ITEMS, SIDEBAR_ITEMS }

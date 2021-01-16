@@ -13,15 +13,10 @@ export type MouseRef = {
   scrollToElement: (id: number) => void
 }
 
-type Sections = {
-  path: string
-  label: string | null
-}[]
-
-const useMouseRef = (sections: Sections): MouseRef => {
+const useMouseRef = (numberOfRefs: number): MouseRef => {
   const [active, setActive] = useState([
     true,
-    ...Array(sections.length - 1).fill(false),
+    ...Array(numberOfRefs - 1).fill(false),
   ])
   const refs = useRef<Array<HTMLDivElement | null>>([])
 
@@ -40,14 +35,14 @@ const useMouseRef = (sections: Sections): MouseRef => {
 
   const handleMouseOver = useCallback(
     (e: MouseEvent) => {
-      sections.forEach((_, id) => {
+      active.forEach((_, id) => {
         const ref = refs.current[id]
         if (ref && ref.contains(e.target as HTMLElement)) {
           setActiveSection(id)
         }
       })
     },
-    [setActiveSection, sections],
+    [setActiveSection, active],
   )
 
   useEffect(() => {

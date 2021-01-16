@@ -5,17 +5,18 @@ import { Column } from 'components/styled'
 import { ChildrenProps } from 'types'
 
 interface Props extends ChildrenProps {
-  bgColor: string
+  bgColor?: string
+  id?: string
   label?: string | null
-  containerRef: (el: HTMLDivElement) => HTMLDivElement
+  containerRef?: (el: HTMLDivElement) => void
 }
 
 const Container = styled(Column)<{
-  bgColor: string
+  bgColor?: string
 }>`
   align-items: center;
-  padding: calc(5rem + 1vw) 0 calc(3rem + 1vw);
-  background-color: ${({ bgColor }) => bgColor};
+  padding: calc(5rem + 1vw) 0;
+  background-color: ${({ theme, bgColor }) => bgColor || theme.colors.primary};
 `
 
 const Heading = styled.h1`
@@ -40,15 +41,12 @@ const Content = styled.div`
 
 const Section = ({
   bgColor,
+  id,
   label,
   containerRef,
   children,
 }: Props): ReactElement => (
-  <Container
-    bgColor={bgColor}
-    ref={containerRef}
-    id={label ? label.toLowerCase() : ''}
-  >
+  <Container bgColor={bgColor} ref={containerRef} id={id}>
     {label && <Heading>{label}</Heading>}
     <Content>{children}</Content>
   </Container>

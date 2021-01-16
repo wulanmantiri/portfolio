@@ -13,14 +13,17 @@ type Props = {
   type?: string
 }
 
-const Row = styled.div`
+const Row = styled.div<{
+  justify?: string
+}>`
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: ${({ justify }) => justify || 'flex-start'};
 `
 
 const Achievement = ({ time, ...rest }: Props): ReactElement => (
-  <Row>
+  <Row justify="flex-end">
     <Content align="flex-end" {...rest} />
     <Separator />
     <TimeText time={time} size="sm" />

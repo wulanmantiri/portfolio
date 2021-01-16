@@ -17,6 +17,7 @@ const StyledBox = styled(Center)`
   width: 35px;
   height: 35px;
   border-radius: 0.5rem;
+  box-shadow: 0.5px 0.5px 3px ${({ theme }) => theme.colors.sidebar};
 `
 
 const PopupContainer = styled.div`

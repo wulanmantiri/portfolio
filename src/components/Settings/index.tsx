@@ -1,9 +1,9 @@
 import React, { ReactElement, useContext, useState } from 'react'
 import styled from 'styled-components'
 
-import { Row, Center } from 'components/styled'
+import { Row, Center, SpacedRow } from 'components/styled'
 import { ThemeContext } from 'store/ThemeProvider'
-import { TripleLineIcon } from 'components'
+import { TripleLineIcon, SunIcon, MoonIcon } from 'components'
 
 const FixedContainer = styled.div`
   position: fixed;
@@ -20,12 +20,13 @@ const StyledBox = styled(Center)`
   box-shadow: 0.5px 0.5px 3px ${({ theme }) => theme.colors.sidebar};
 `
 
-const PopupContainer = styled.div`
+const PopupContainer = styled(Center)`
   position: fixed;
   left: calc(0.5rem + 1.5vw);
   bottom: 10vh;
   z-index: 10;
-  width: 13rem;
+  width: 13.5rem;
+  height: auto;
   padding: 1rem;
   background-color: ${({ theme }) => theme.colors.settings};
   border-radius: 0.5rem;
@@ -45,10 +46,10 @@ const Option = styled.div<{
   color: white;
   background-color: ${({ selected }) => (selected ? 'black' : 'transparent')};
   border-radius: 0.5rem;
-  width: 5rem;
   text-align: center;
+  font-weight: 600;
   font-size: calc(0.8rem + 0.1vw);
-  padding: 0.7rem;
+  padding: 0.7rem 1rem;
 `
 
 const Settings = (): ReactElement => {
@@ -63,15 +64,21 @@ const Settings = (): ReactElement => {
       {opened && (
         <PopupContainer>
           <Heading>Appearance</Heading>
-          <Row justify="space-between">
+          <Row justify="space-between" width="11.5rem">
             <Option onClick={() => setLightThemed(true)} selected={lightThemed}>
-              Light
+              <SpacedRow align="center">
+                <SunIcon />
+                <p>Light</p>
+              </SpacedRow>
             </Option>
             <Option
               onClick={() => setLightThemed(false)}
               selected={!lightThemed}
             >
-              Dark
+              <SpacedRow align="center">
+                <MoonIcon />
+                <p>Dark</p>
+              </SpacedRow>
             </Option>
           </Row>
         </PopupContainer>

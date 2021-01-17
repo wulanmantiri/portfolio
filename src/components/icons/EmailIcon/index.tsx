@@ -1,9 +1,5 @@
 import React, { ReactElement } from 'react'
-
-type Props = {
-  size?: string
-  color?: string
-}
+import { Icon as Props } from 'models/icon'
 
 const EmailIcon = ({ size, color }: Props): ReactElement => (
   <svg

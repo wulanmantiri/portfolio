@@ -1,7 +1,7 @@
 import React, { ReactElement, useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 
-import { Layout, Section, Sidebar } from 'components'
+import { Layout, Section, Sidebar, ContactBox } from 'components'
 import { useWindow, useMouseRef } from 'hooks'
 import { ExperiencesList, ProjectsList } from 'containers'
 import { BRIEF_EXPERIENCES_LIST } from 'constants/experiences'
@@ -48,7 +48,7 @@ const LandingPage = (): ReactElement => {
         containerRef={el => assignRef(el, 3)}
         id="contact"
       >
-        <div>hello</div>
+        <ContactBox />
       </Section>
     </Layout>
   )

@@ -1,6 +1,8 @@
 export * from './icons'
 
+export { default as ContactBox } from './ContactBox'
 export { default as ExperienceUnit } from './ExperienceUnit'
+export { default as Footer } from './Footer'
 export { default as Layout } from './Layout'
 export { default as Navbar } from './Navbar'
 export { default as ProjectCard } from './ProjectCard'

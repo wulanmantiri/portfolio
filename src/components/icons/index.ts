@@ -1,0 +1,7 @@
+export { default as CodeIcon } from './CodeIcon'
+export { default as EmailIcon } from './EmailIcon'
+export { default as LinkedinIcon } from './LinkedinIcon'
+export { default as MoonIcon } from './MoonIcon'
+export { default as PhoneIcon } from './PhoneIcon'
+export { default as SunIcon } from './SunIcon'
+export { default as TripleLineIcon } from './TripleLineIcon'

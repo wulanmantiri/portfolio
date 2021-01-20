@@ -1,8 +1,8 @@
-const WULANS_EMAIL = 'wulan.mantiri@gmail.com'
-const WULANS_PHONE = '+6282217139749'
+export const WULANS_EMAIL = 'wulan.mantiri@gmail.com'
+export const WULANS_PHONE = '+6282217139749'
 
-const LINKEDIN_URL = 'https://www.linkedin.com/in/wulanmantiri'
-const EMAIL_URL = `mailto:${WULANS_EMAIL}`
-const PHONE_URL = `tel:${WULANS_PHONE}`
-
-export { WULANS_EMAIL, WULANS_PHONE, LINKEDIN_URL, EMAIL_URL, PHONE_URL }
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/wulanmantiri'
+export const RESUME_URL =
+  'https://drive.google.com/uc?export=download&id=10zBqw-GqbaHg7QP1QOdDTZJRYC8BU8CV'
+export const EMAIL_URL = `mailto:${WULANS_EMAIL}`
+export const PHONE_URL = `tel:${WULANS_PHONE}`

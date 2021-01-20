@@ -1,7 +1,7 @@
 import React, { ReactElement, useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 
-import { Layout, Section, Sidebar, ContactBox } from 'components'
+import { Layout, Section, Sidebar, ContactBox, About } from 'components'
 import { useWindow, useMouseRef } from 'hooks'
 import { ExperiencesList, ProjectsList } from 'containers'
 import { BRIEF_EXPERIENCES_LIST } from 'constants/experiences'
@@ -22,7 +22,7 @@ const LandingPage = (): ReactElement => {
     <Layout>
       {isMobile ? <></> : <Sidebar mouseRef={mouseRef} />}
       <Section bgColor={primary} containerRef={el => assignRef(el, 0)}>
-        <div>hello</div>
+        <About />
       </Section>
       <Section
         bgColor={section}

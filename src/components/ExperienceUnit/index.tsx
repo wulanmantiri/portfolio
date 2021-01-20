@@ -17,7 +17,7 @@ const Row = styled.div<{
 
 const Achievement = ({ time, ...rest }: Props): ReactElement => (
   <Row justify="flex-end">
-    <Content align="flex-end" {...rest} />
+    <Content align="right" {...rest} />
     <Separator />
     <TimeText time={time} size="sm" />
   </Row>

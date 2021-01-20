@@ -17,28 +17,36 @@ const ContentContainer = styled(Column)`
   }
 `
 
-const Heading = styled.h1`
+const Heading = styled.h1<{
+  align?: string
+}>`
   font-size: calc(1rem + 0.4vw);
-  text-align: right;
+  text-align: ${({ align }) => align || 'left'};
 `
 
-const SubHeading = styled.p`
+const SubHeading = styled.p<{
+  align?: string
+}>`
   font-weight: 600;
-  font-size: calc(0.8rem + 0.3vw);
-  text-align: justify;
+  font-size: calc(0.9rem + 0.3vw);
+  text-align: ${({ align }) => align || 'left'};
   margin-top: 0.2rem;
 `
 
 const DescriptionList = styled.ul`
-  list-style: none;
+  list-style-type: none;
   margin-top: 1rem;
 `
 
 const Description = styled.li`
   text-align: justify;
+  line-height: 1.3;
+  font-size: calc(0.8rem + 0.2vw);
   &::before {
-    content: '\u2749';
-    margin-right: 0.5rem;
+    content: '\u25C6';
+    font-size: 0.8rem;
+    vertical-align: 10%;
+    padding-right: calc(0.5rem + 0.5vw);
   }
 `
 
@@ -48,9 +56,9 @@ export const Content = ({
   descriptions,
   align,
 }: Props): ReactElement => (
-  <ContentContainer align={align}>
-    <Heading>{title}</Heading>
-    <SubHeading>{place}</SubHeading>
+  <ContentContainer align={align === 'right' ? 'flex-end' : 'flex-start'}>
+    <Heading align={align}>{title}</Heading>
+    <SubHeading align={align}>{place}</SubHeading>
     {descriptions && (
       <DescriptionList>
         {descriptions.map((desc, id) => (

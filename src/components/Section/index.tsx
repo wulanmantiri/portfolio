@@ -20,7 +20,7 @@ const Container = styled(Column)<{
 `
 
 const Heading = styled.h1`
-  margin-bottom: calc(2rem + 2vw);
+  margin-bottom: calc(2rem + 1.5vw);
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.heading};
   font-weight: 500;

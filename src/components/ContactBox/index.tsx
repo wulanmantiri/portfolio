@@ -17,12 +17,8 @@ const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 0.5rem;
-  padding: calc(2rem + 1vw) 5vw;
+  padding: calc(2rem + 1vw) 8%;
   box-shadow: 1px 1px 3px ${({ theme }) => theme.colors.border};
-
-  @media (max-width: 600px) {
-    padding: calc(2rem + 1vw) 8vw;
-  }
 `
 
 const Heading = styled.h1`
@@ -57,7 +53,7 @@ const ContactBox = (): ReactElement => (
         <ContactInfo url={EMAIL_URL} LeftIcon={EmailIcon} text={WULANS_EMAIL} />
         <ContactInfo url={PHONE_URL} LeftIcon={PhoneIcon} text={WULANS_PHONE} />
       </SpacedColumn>
-      <SpacedColumn spacing="0.5rem" width="calc(7rem + 10vw)">
+      <SpacedColumn spacing="0.5rem" width="calc(7rem + 8vw)">
         <SubHeading>see my profile in</SubHeading>
         <ContactInfo url={LINKEDIN_URL} text="linkedin" />
         <ContactInfo url={RESUME_URL} text="resume" />

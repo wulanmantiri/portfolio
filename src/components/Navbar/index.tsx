@@ -13,7 +13,7 @@ const FixedContainer = styled(Center)`
   z-index: 9;
   width: 100%;
   height: calc(3rem + 0.5vw);
-  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+  border-bottom: 1.5px solid ${({ theme }) => theme.colors.border};
   background-color: ${({ theme }) => theme.colors.navbar};
   backdrop-filter: blur(5px);
 `

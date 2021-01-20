@@ -1,5 +1,6 @@
 export * from './icons'
 
+export { default as About } from './About'
 export { default as ContactBox } from './ContactBox'
 export { default as ExperienceUnit } from './ExperienceUnit'
 export { default as Footer } from './Footer'

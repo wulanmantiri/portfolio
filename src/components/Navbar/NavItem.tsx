@@ -13,15 +13,16 @@ const StyledHashLink = styled(HashLink)`
   color: ${({ theme }) => theme.colors.secondary};
   font-weight: 600;
   padding: 0 0.5rem;
+  transition: all 0.2s ease;
 
   &:hover {
-    transform: scale3d(1.01, 1.01, 1);
+    transform: scale3d(1.05, 1.05, 1);
     transform-style: preserve-3d;
+    background-color: ${({ theme }) => theme.colors.section};
     border: 1px solid ${({ theme }) => theme.colors.border};
     border-radius: 0.5rem;
     padding: 0.4rem 0.7rem;
-    box-shadow: 3px 3px 3px ${({ theme }) => theme.colors.sidebar};
-    transition: 0.2s;
+    box-shadow: 2px 2px 4px ${({ theme }) => theme.colors.border};
   }
 `
 

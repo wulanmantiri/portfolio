@@ -18,13 +18,10 @@ type Props = {
 const Container = styled.div`
   position: relative;
   width: 45%;
-  margin-bottom: 4rem;
+  margin-bottom: calc(3rem + 1vw);
 
   @media (max-width: 800px) {
     width: 100%;
-  }
-  @media (max-width: 600px) {
-    margin-bottom: 3rem;
   }
 `
 
@@ -33,13 +30,16 @@ const ProjectImage = styled.img<{
 }>`
   position: relative;
   z-index: 2;
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
+  padding: 1px;
+  border: 0.5px solid ${({ theme }) => theme.colors.border};
   border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px ${({ theme }) => theme.colors.border};
 
-  @media (min-width: 600px) {
-    transition: 0.5s;
-    transform: ${({ hovered }) => (hovered ? 'translate(0, -3.8rem)' : '0')};
+  @media (min-width: 800px) {
+    transition: 0.5s ease;
+    transform: ${({ hovered }) => (hovered ? 'translate(0, -3.9rem)' : '0')};
   }
 `
 
@@ -48,9 +48,9 @@ const Placeholder = styled(SpacedColumn)`
   z-index: 1;
   bottom: 0;
   width: 100%;
-  padding: 0.2rem 0.2rem 0;
+  padding: 0.2rem;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     position: relative;
   }
 `

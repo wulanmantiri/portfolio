@@ -88,10 +88,13 @@ export const PROJECTS = [
     ],
   },
   {
-    name: 'Personal Website',
-    description: 'My Own Portfolio display',
+    name: `Wulan's Personal Website`,
+    description: `
+      Wulan's Personal Website is a display of my portfolio comprising
+      of the productive things I do here and there, built using React Typescript.
+    `,
     imageUrl:
-      'https://assets.website-files.com/5f00c2a3594ffaa1f54dfa5f/5fb25514d346632ae4c145b9_Meetingbox%20small.jpg',
+      'https://drive.google.com/uc?export=view&id=1LiqXubEUmwLiYNli8Tb5LiFwhvD6DnId',
     websiteUrl: 'https://wulanmantiri.netlify.app/',
     repo: [
       {

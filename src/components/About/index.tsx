@@ -80,7 +80,7 @@ const About = (): ReactElement => (
         Works aside, I love to travel and hunt down local cuisines.*
         <br />
         See the recap of what I have done by scrolling or clicking
-        <StyledHashLink to="/contact">here.</StyledHashLink>
+        <StyledHashLink to="/#contact">here.</StyledHashLink>
         <br />
         <PsNote>*Well, the hobby stays dormant for now.</PsNote>
       </Description>

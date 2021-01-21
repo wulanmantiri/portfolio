@@ -1,4 +1,4 @@
-export const COMPLETE_ACHIEVEMENTS_LIST = [
+export const ACHIEVEMENTS_LIST = [
   {
     title: 'Champion',
     time: 'Aug 2020',
@@ -35,5 +35,3 @@ export const COMPLETE_ACHIEVEMENTS_LIST = [
     place: 'United Nations Environment Programme, Asia Youth International MUN',
   },
 ]
-
-export const BRIEF_ACHIEVEMENTS_LIST = COMPLETE_ACHIEVEMENTS_LIST

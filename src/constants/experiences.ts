@@ -1,4 +1,4 @@
-export const BRIEF_EXPERIENCES_LIST = [
+export const EXPERIENCES_LIST = [
   {
     title: 'Frontend Software Engineer',
     time: 'Feb 2020 - present',
@@ -83,5 +83,3 @@ export const BRIEF_EXPERIENCES_LIST = [
     ],
   },
 ]
-
-export const COMPLETE_EXPERIENCES_LIST = BRIEF_EXPERIENCES_LIST

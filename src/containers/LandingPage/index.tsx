@@ -4,8 +4,8 @@ import { ThemeContext } from 'styled-components'
 import { Layout, Section, Sidebar, ContactBox, About } from 'components'
 import { useWindow, useMouseRef } from 'hooks'
 import { ExperiencesList, ProjectsList } from 'containers'
-import { BRIEF_EXPERIENCES_LIST } from 'constants/experiences'
-import { BRIEF_ACHIEVEMENTS_LIST } from 'constants/achievements'
+import { EXPERIENCES_LIST } from 'constants/experiences'
+import { ACHIEVEMENTS_LIST } from 'constants/achievements'
 import { LANDING_PAGE_SECTIONS } from 'constants/section'
 
 const LandingPage = (): ReactElement => {
@@ -34,8 +34,8 @@ const LandingPage = (): ReactElement => {
         id="experiences"
       >
         <ExperiencesList
-          experiencesList={BRIEF_EXPERIENCES_LIST}
-          achievementsList={BRIEF_ACHIEVEMENTS_LIST}
+          experiencesList={EXPERIENCES_LIST}
+          achievementsList={ACHIEVEMENTS_LIST}
         />
       </Section>
       <Section

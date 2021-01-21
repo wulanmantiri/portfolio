@@ -1,24 +1,24 @@
-import {
-  useRef,
-  useState,
-  useCallback,
-  useEffect,
-  MutableRefObject,
-} from 'react'
+import { useRef, useState, useCallback, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+
+export type Location = {
+  pathname: string
+  hash: string
+}
 
 export type MouseRef = {
   active: boolean[]
-  refs: MutableRefObject<(HTMLDivElement | null)[]>
-  setActiveSection: (id: number) => void
-  scrollToElement: (id: number) => void
+  sections: Location[]
+  assignRef: (el: HTMLDivElement, id: number) => void
 }
 
-const useMouseRef = (numberOfRefs: number): MouseRef => {
+const useMouseRef = (sections: Location[]): MouseRef => {
   const [active, setActive] = useState([
     true,
-    ...Array(numberOfRefs - 1).fill(false),
+    ...Array(sections.length - 1).fill(false),
   ])
   const refs = useRef<Array<HTMLDivElement | null>>([])
+  const location = useLocation()
 
   const setActiveSection = useCallback((idx: number) => {
     setActive(active => active.map((_, id) => idx === id))
@@ -33,16 +33,20 @@ const useMouseRef = (numberOfRefs: number): MouseRef => {
     [setActiveSection],
   )
 
+  const assignRef = (el: HTMLDivElement, idx: number) => {
+    refs.current[idx] = el
+  }
+
   const handleMouseOver = useCallback(
     (e: MouseEvent) => {
-      active.forEach((_, id) => {
+      sections.forEach((_, id) => {
         const ref = refs.current[id]
         if (ref && ref.contains(e.target as HTMLElement)) {
           setActiveSection(id)
         }
       })
     },
-    [setActiveSection, active],
+    [setActiveSection, sections],
   )
 
   useEffect(() => {
@@ -52,11 +56,15 @@ const useMouseRef = (numberOfRefs: number): MouseRef => {
     }
   }, [handleMouseOver])
 
+  useEffect(() => {
+    const isLocation = (loc: Location) => loc.hash === location.hash
+    scrollToElement(sections.findIndex(isLocation))
+  }, [location, scrollToElement, sections])
+
   return {
     active,
-    refs,
-    setActiveSection,
-    scrollToElement,
+    sections,
+    assignRef,
   }
 }
 

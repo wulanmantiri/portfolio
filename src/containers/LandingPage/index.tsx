@@ -6,22 +6,25 @@ import { useWindow, useMouseRef } from 'hooks'
 import { ExperiencesList, ProjectsList } from 'containers'
 import { BRIEF_EXPERIENCES_LIST } from 'constants/experiences'
 import { BRIEF_ACHIEVEMENTS_LIST } from 'constants/achievements'
+import { LANDING_PAGE_SECTIONS } from 'constants/section'
 
 const LandingPage = (): ReactElement => {
   const theme = useContext(ThemeContext)
   const { primary, section } = theme.colors
 
-  const { isMobile } = useWindow()
-  const mouseRef = useMouseRef(4)
+  const mouseRef = useMouseRef(LANDING_PAGE_SECTIONS)
+  const { assignRef } = mouseRef
 
-  const assignRef = (el: HTMLDivElement, idx: number) => {
-    mouseRef.refs.current[idx] = el
-  }
+  const { isMobile } = useWindow()
 
   return (
     <Layout>
       {isMobile ? <></> : <Sidebar mouseRef={mouseRef} />}
-      <Section bgColor={primary} containerRef={el => assignRef(el, 0)}>
+      <Section
+        bgColor={primary}
+        containerRef={el => assignRef(el, 0)}
+        id="about"
+      >
         <About />
       </Section>
       <Section

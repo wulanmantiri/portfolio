@@ -1,23 +1,27 @@
 const NAV_ITEMS = [
   {
-    path: '/#experiences',
+    pathname: '/',
+    hash: '#experiences',
     label: 'Experiences',
   },
   {
-    path: '/#projects',
+    pathname: '/',
+    hash: '#projects',
     label: 'Projects',
   },
   {
-    path: '/#contact',
+    pathname: '/',
+    hash: '#contact',
     label: 'Contact',
   },
 ]
 
-const SIDEBAR_ITEMS = [
+const LANDING_PAGE_SECTIONS = [
   {
-    path: '/',
+    pathname: '/',
+    hash: '#about',
   },
   ...NAV_ITEMS,
 ]
 
-export { NAV_ITEMS, SIDEBAR_ITEMS }
+export { NAV_ITEMS, LANDING_PAGE_SECTIONS }

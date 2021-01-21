@@ -31,10 +31,13 @@ const MobileNavbar = (): ReactElement => {
       {opened && (
         <PopupContainer>
           <NavContainer>
-            {NAV_ITEMS.map(({ path, label }, id) => (
+            {NAV_ITEMS.map(({ pathname, hash, label }, id) => (
               <NavItem
                 key={`nav${id}`}
-                to={path}
+                to={{
+                  pathname,
+                  hash,
+                }}
                 onClick={() => setOpened(false)}
               >
                 {label}

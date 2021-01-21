@@ -1,14 +1,16 @@
 import React, { ReactElement } from 'react'
-import { HashLink } from 'react-router-hash-link'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
+import { Location } from 'hooks/useMouseRef'
+
 type Props = {
-  to: string
+  to: Location | string
   children: JSX.Element | string
   onClick?: VoidFunction
 }
 
-const StyledHashLink = styled(HashLink)`
+const StyledLink = styled(Link)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.secondary};
   font-weight: 600;
@@ -27,9 +29,9 @@ const StyledHashLink = styled(HashLink)`
 `
 
 const NavItem = ({ to, onClick, children }: Props): ReactElement => (
-  <StyledHashLink smooth to={to} onClick={onClick}>
+  <StyledLink to={to} onClick={onClick}>
     {children}
-  </StyledHashLink>
+  </StyledLink>
 )
 
 export { NavItem }

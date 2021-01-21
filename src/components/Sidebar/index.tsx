@@ -2,7 +2,6 @@ import React, { ReactElement } from 'react'
 import styled from 'styled-components'
 
 import { MouseRef } from 'hooks/useMouseRef'
-import { SIDEBAR_ITEMS } from 'constants/section'
 import { SidebarItem } from './SidebarItem'
 
 type Props = {
@@ -18,12 +17,14 @@ const Container = styled.div`
 
 const Sidebar = ({ mouseRef }: Props): ReactElement => (
   <Container>
-    {SIDEBAR_ITEMS.map(({ path }, i) => (
+    {mouseRef.sections.map(({ pathname, hash }, i) => (
       <SidebarItem
         key={`sidenav${i + 1}`}
-        to={path}
+        to={{
+          pathname,
+          hash,
+        }}
         active={mouseRef.active[i]}
-        onClick={() => mouseRef.scrollToElement(i)}
       >
         {`0${i + 1}`}
       </SidebarItem>

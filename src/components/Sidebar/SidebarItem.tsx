@@ -1,13 +1,13 @@
 import React, { ReactElement } from 'react'
 import styled from 'styled-components'
-import { HashLink } from 'react-router-hash-link'
+import { Link } from 'react-router-dom'
 
+import { Location } from 'hooks/useMouseRef'
 import { Center } from 'components/styled'
 
 type Props = {
-  to: string
+  to: Location
   active: boolean
-  onClick: VoidFunction
   children: string
 }
 
@@ -22,7 +22,7 @@ const Separator = styled.div<{
   transition: all 0.4s;
 `
 
-const StyledLink = styled(HashLink)`
+const StyledLink = styled(Link)`
   text-decoration: none;
   margin: 1rem 0;
   text-align: center;
@@ -31,16 +31,9 @@ const StyledLink = styled(HashLink)`
   color: ${({ theme }) => theme.colors.sidebar};
 `
 
-const SidebarItem = ({
-  to,
-  active,
-  onClick,
-  children,
-}: Props): ReactElement => (
+const SidebarItem = ({ to, active, children }: Props): ReactElement => (
   <Center>
-    <StyledLink smooth to={to} onClick={onClick}>
-      {children}
-    </StyledLink>
+    <StyledLink to={to}>{children}</StyledLink>
     <Separator active={active} />
   </Center>
 )

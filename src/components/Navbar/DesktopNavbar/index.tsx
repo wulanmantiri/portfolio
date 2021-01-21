@@ -6,8 +6,14 @@ import { NavItem } from '../NavItem'
 
 const DesktopNavbar = (): ReactElement => (
   <SpacedRow spacing="1.5rem" justify="center" align="center">
-    {NAV_ITEMS.map(({ path, label }, id) => (
-      <NavItem key={'nav' + id} to={path}>
+    {NAV_ITEMS.map(({ pathname, hash, label }, id) => (
+      <NavItem
+        key={`nav${id}`}
+        to={{
+          pathname,
+          hash,
+        }}
+      >
         {label}
       </NavItem>
     ))}

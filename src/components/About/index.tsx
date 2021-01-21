@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import styled from 'styled-components'
-import { HashLink } from 'react-router-hash-link'
+import { Link } from 'react-router-dom'
 
 import { SpacedColumn } from 'components/styled'
 
@@ -55,13 +55,18 @@ const PsNote = styled.span`
   text-align: center;
 `
 
-const StyledHashLink = styled(HashLink)`
+const StyledLink = styled(Link)`
   display: inline-block;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.blue};
   margin-left: calc(0.2rem + 0.3vw);
   margin-top: -0.3rem;
 `
+
+const contactPath = {
+  pathname: '/',
+  hash: '#contact',
+}
 
 const About = (): ReactElement => (
   <Container>
@@ -80,7 +85,7 @@ const About = (): ReactElement => (
         Works aside, I love to travel and hunt down local cuisines.*
         <br />
         See the recap of what I have done by scrolling or clicking
-        <StyledHashLink to="/#contact">here.</StyledHashLink>
+        <StyledLink to={contactPath}>here</StyledLink>
         <br />
         <PsNote>*Well, the hobby stays dormant for now.</PsNote>
       </Description>

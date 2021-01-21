@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 import { SpacedColumn } from 'components/styled'
+import { PROFILE_PIC_URL } from 'constants/biodata'
 
 const Container = styled.div`
   display: flex;
@@ -12,7 +13,7 @@ const Container = styled.div`
 
   @media (max-width: 800px) {
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
   }
 `
 
@@ -70,10 +71,7 @@ const contactPath = {
 
 const About = (): ReactElement => (
   <Container>
-    <ProfileImage
-      alt="Wulan's Profile Picture"
-      src="https://drive.google.com/uc?export=view&id=1pW2YTSBG9YRn3I44xY7osOV9mJEwvnNQ"
-    />
+    <ProfileImage alt="Wulan's Profile Picture" src={PROFILE_PIC_URL} />
     <SpacedColumn align="center" spacing="5vh">
       <SpacedColumn align="center" spacing="-0.8vw">
         <Greetings>{`hi, i'm`}</Greetings>
@@ -85,7 +83,7 @@ const About = (): ReactElement => (
         Works aside, I love to travel and hunt down local cuisines.*
         <br />
         See the recap of what I have done by scrolling or clicking
-        <StyledLink to={contactPath}>here</StyledLink>
+        <StyledLink to={contactPath}>here.</StyledLink>
         <br />
         <PsNote>*Well, the hobby stays dormant for now.</PsNote>
       </Description>

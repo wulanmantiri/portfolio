@@ -7,7 +7,8 @@ declare module 'styled-components' {
       sidebar: string
       primary: string
       secondary: string
-      section: string
+      evenSection: string
+      oddSection: string
       contrast: string
       settings: string
       blue: string

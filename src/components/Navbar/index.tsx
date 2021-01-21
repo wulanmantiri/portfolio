@@ -15,7 +15,7 @@ const FixedContainer = styled(Center)`
   height: calc(3rem + 0.5vw);
   border-bottom: 1.5px solid ${({ theme }) => theme.colors.border};
   background-color: ${({ theme }) => theme.colors.navbar};
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
 `
 
 const NavContainer = styled(Row)`

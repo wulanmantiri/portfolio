@@ -3,13 +3,13 @@ import styled from 'styled-components'
 
 import { EmailIcon, PhoneIcon, LinkedinIcon } from 'components'
 import { SpacedRow } from 'components/styled'
-import { PHONE_URL, EMAIL_URL, LINKEDIN_URL } from 'constants/contact'
+import { PHONE_URL, EMAIL_URL, LINKEDIN_URL } from 'constants/biodata'
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.section};
+  background-color: ${({ theme }) => theme.colors.oddSection};
 
   @media (max-width: 600px) {
     height: 5rem;

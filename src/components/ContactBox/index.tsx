@@ -10,11 +10,11 @@ import {
   RESUME_URL,
   EMAIL_URL,
   PHONE_URL,
-} from 'constants/contact'
+} from 'constants/biodata'
 import { ContactInfo } from './ContactInfo'
 
 const Container = styled.div`
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.evenSection};
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 0.5rem;
   padding: calc(2rem + 1vw) 8%;

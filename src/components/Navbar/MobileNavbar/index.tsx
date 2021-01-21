@@ -13,7 +13,7 @@ const PopupContainer = styled.div`
   z-index: 10;
   width: 100%;
   padding: 0.5rem 0;
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.evenSection};
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 `
 

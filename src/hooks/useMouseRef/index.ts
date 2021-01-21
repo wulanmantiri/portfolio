@@ -57,8 +57,10 @@ const useMouseRef = (sections: Location[]): MouseRef => {
   }, [handleMouseOver])
 
   useEffect(() => {
-    const isLocation = (loc: Location) => loc.hash === location.hash
-    scrollToElement(sections.findIndex(isLocation))
+    if (location.hash) {
+      const isLocation = (loc: Location) => loc.hash === location.hash
+      scrollToElement(sections.findIndex(isLocation))
+    }
   }, [location, scrollToElement, sections])
 
   return {

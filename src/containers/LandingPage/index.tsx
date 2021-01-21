@@ -10,7 +10,7 @@ import { LANDING_PAGE_SECTIONS } from 'constants/section'
 
 const LandingPage = (): ReactElement => {
   const theme = useContext(ThemeContext)
-  const { primary, section } = theme.colors
+  const { evenSection, oddSection } = theme.colors
 
   const mouseRef = useMouseRef(LANDING_PAGE_SECTIONS)
   const { assignRef } = mouseRef
@@ -21,14 +21,14 @@ const LandingPage = (): ReactElement => {
     <Layout>
       {isMobile ? <></> : <Sidebar mouseRef={mouseRef} />}
       <Section
-        bgColor={primary}
+        bgColor={evenSection}
         containerRef={el => assignRef(el, 0)}
         id="about"
       >
         <About />
       </Section>
       <Section
-        bgColor={section}
+        bgColor={oddSection}
         containerRef={el => assignRef(el, 1)}
         label="Experiences"
         id="experiences"
@@ -39,7 +39,7 @@ const LandingPage = (): ReactElement => {
         />
       </Section>
       <Section
-        bgColor={primary}
+        bgColor={evenSection}
         containerRef={el => assignRef(el, 2)}
         label="Projects"
         id="projects"
@@ -47,7 +47,7 @@ const LandingPage = (): ReactElement => {
         <ProjectsList />
       </Section>
       <Section
-        bgColor={section}
+        bgColor={oddSection}
         containerRef={el => assignRef(el, 3)}
         id="contact"
       >

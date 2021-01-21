@@ -16,7 +16,8 @@ const Container = styled(Column)<{
 }>`
   align-items: center;
   padding: calc(5rem + 1vw) 0;
-  background-color: ${({ theme, bgColor }) => bgColor || theme.colors.primary};
+  background-color: ${({ theme, bgColor }) =>
+    bgColor || theme.colors.evenSection};
 `
 
 const Heading = styled.h1`

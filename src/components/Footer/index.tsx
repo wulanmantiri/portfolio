@@ -10,6 +10,7 @@ const Container = styled.div`
   justify-content: center;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.oddSection};
+  height: 3.5rem;
 
   @media (max-width: 600px) {
     height: 5rem;

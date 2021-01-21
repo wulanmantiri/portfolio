@@ -45,6 +45,7 @@ const Description = styled.p`
   font-weight: 600;
   text-align: center;
   line-height: 1.4;
+  vertical-align: top;
 
   @media (max-width: 600px) {
     width: 85%;
@@ -57,11 +58,10 @@ const PsNote = styled.span`
 `
 
 const StyledLink = styled(Link)`
-  display: inline-block;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.blue};
-  margin-left: calc(0.2rem + 0.3vw);
-  margin-top: -0.3rem;
+  vertical-align: top;
+  line-height: 1.4;
 `
 
 const contactPath = {
@@ -82,8 +82,8 @@ const About = (): ReactElement => (
         <br />
         Works aside, I love to travel and hunt down local cuisines.*
         <br />
-        See the recap of what I have done by scrolling or clicking
-        <StyledLink to={contactPath}>here.</StyledLink>
+        See the recap of what I have done by scrolling or clicking{' '}
+        <StyledLink to={contactPath}>here</StyledLink>.
         <br />
         <PsNote>*Well, the hobby stays dormant for now.</PsNote>
       </Description>

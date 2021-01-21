@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 import styled from 'styled-components'
 
-import { EmailIcon, PhoneIcon } from 'components'
+import { EmailIcon, PhoneIcon, ExternalLinkIcon } from 'components'
 import { SpacedColumn } from 'components/styled'
 import {
   WULANS_EMAIL,
@@ -55,8 +55,16 @@ const ContactBox = (): ReactElement => (
       </SpacedColumn>
       <SpacedColumn spacing="0.5rem" width="calc(7rem + 8vw)">
         <SubHeading>see my profile in</SubHeading>
-        <ContactInfo url={LINKEDIN_URL} text="linkedin" />
-        <ContactInfo url={RESUME_URL} text="resume" />
+        <ContactInfo
+          url={LINKEDIN_URL}
+          RightIcon={ExternalLinkIcon}
+          text="linkedin"
+        />
+        <ContactInfo
+          url={RESUME_URL}
+          RightIcon={ExternalLinkIcon}
+          text="resume"
+        />
       </SpacedColumn>
     </WrapContainer>
   </Container>

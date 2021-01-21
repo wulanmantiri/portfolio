@@ -56,11 +56,18 @@ export const ContactInfo = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <SpacedRow align="center" spacing="1.2rem">
-        {LeftIcon && <LeftIcon color={hovered ? blue : secondary} />}
-        <p>{text}</p>
-        {RightIcon && <RightIcon color={hovered ? blue : secondary} />}
-      </SpacedRow>
+      {LeftIcon && (
+        <SpacedRow align="center" spacing="1.2rem">
+          <LeftIcon color={hovered ? blue : secondary} />
+          <p>{text}</p>
+        </SpacedRow>
+      )}
+      {RightIcon && (
+        <SpacedRow align="center" spacing="0.3rem">
+          <p>{text}</p>
+          <RightIcon color={hovered ? blue : secondary} size="18" />
+        </SpacedRow>
+      )}
     </StyledLink>
   )
 }

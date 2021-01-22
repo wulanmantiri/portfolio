@@ -3,7 +3,7 @@ import { fonts } from '../fonts'
 
 const colors = {
   border: '#d8d8d8',
-  sidebar: '#7F7F7F',
+  sidebar: '#585858',
   primary: '#FFFFFF',
   secondary: '#1D1D1F',
   evenSection: '#FFFFFF',

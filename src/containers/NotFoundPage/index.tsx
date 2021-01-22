@@ -14,19 +14,20 @@ const Container = styled(Center)`
 `
 
 const ExtraLargeText = styled.h1`
-  color: ${({ theme }) => theme.colors.settings};
+  color: ${({ theme }) => theme.colors.sidebar};
   font-size: calc(5rem + 7vw);
   letter-spacing: calc(2rem + 2vw);
   margin-right: calc(-2rem - 2vw);
 `
 
 const LargeText = styled.h1`
-  color: ${({ theme }) => theme.colors.settings};
+  color: ${({ theme }) => theme.colors.sidebar};
   font-size: calc(2rem + 2vw);
   margin: -2vw 0 5vh;
 `
 
 const RedirectText = styled.p`
+  color: ${({ theme }) => theme.colors.sidebar};
   font-weight: 600;
   font-size: calc(1rem + 0.5vw);
 `

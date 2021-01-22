@@ -36,18 +36,16 @@ const SubHeading = styled.p<{
 const DescriptionList = styled.ul`
   list-style-type: none;
   margin-top: 1rem;
+  font-size: calc(0.8rem + 0.3vw);
+
+  @media (min-width: 600px) {
+    width: 90%;
+  }
 `
 
 const Description = styled.li`
   text-align: justify;
   line-height: 1.3;
-  font-size: calc(0.8rem + 0.2vw);
-  &::before {
-    content: '\u25C6';
-    font-size: 0.8rem;
-    vertical-align: 10%;
-    padding-right: calc(0.5rem + 0.5vw);
-  }
 `
 
 export const Content = ({

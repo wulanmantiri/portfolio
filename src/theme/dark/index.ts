@@ -7,7 +7,7 @@ const colors = {
   primary: '#000000',
   secondary: '#F7F7F7',
   evenSection: '#060606',
-  oddSection: '#101010',
+  oddSection: '#0b0b0b',
   contrast: '#FFFFFF',
   settings: '#292929',
   blue: '#1984EA',

@@ -55,14 +55,18 @@ const Placeholder = styled(SpacedColumn)`
   }
 `
 
-const Heading = styled.h1`
+const Heading = styled.p`
   font-weight: 700;
   font-size: calc(1rem + 0.1vw);
 `
 
 const Description = styled.p`
-  font-size: calc(0.8rem + 0.1vw);
+  font-size: 0.8rem;
   text-align: justify;
+
+  @media (min-width: 1440px) {
+    font-size: 0.9rem;
+  }
 `
 
 const ProjectCard = ({

@@ -25,7 +25,7 @@ const Heading = styled.h1`
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.heading};
   font-weight: 500;
-  font-size: calc(2rem + 1.5vw);
+  font-size: calc(2rem + 1.2vw);
 
   @media (max-width: 600px) {
     margin-bottom: 3rem;
@@ -36,7 +36,7 @@ const Content = styled.div`
   width: 80%;
 
   @media (max-width: 600px) {
-    width: 90%;
+    width: 88%;
   }
 `
 

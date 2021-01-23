@@ -1,9 +1,16 @@
 import React, { ReactElement, useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 
-import { Layout, Section, Sidebar, ContactBox, About } from 'components'
+import {
+  Layout,
+  Section,
+  Sidebar,
+  ContactBox,
+  About,
+  ExperiencesList,
+  ProjectsList,
+} from 'components'
 import { useWindow, useMouseRef } from 'hooks'
-import { ExperiencesList, ProjectsList } from 'containers'
 import { EXPERIENCES_LIST } from 'constants/experiences'
 import { ACHIEVEMENTS_LIST } from 'constants/achievements'
 import { LANDING_PAGE_SECTIONS } from 'constants/section'

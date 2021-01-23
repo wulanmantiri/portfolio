@@ -41,7 +41,7 @@ const Name = styled.p`
 `
 
 const Description = styled.p`
-  font-size: calc(0.8rem + 1vw);
+  font-size: calc(1rem + 0.6vw);
   font-weight: 600;
   text-align: center;
   line-height: 1.4;

@@ -10,24 +10,24 @@ type TimeProps = {
 }
 
 const TimeContainer = styled(Column)<{
-  desktopWidth: string
+  size?: string
 }>`
-  width: ${({ desktopWidth }) => desktopWidth};
+  width: ${({ size }) => (size === 'sm' ? '7%' : '15%')};
 
   @media (max-width: 600px) {
-    width: 20%;
-    padding-right: 0.5vw;
+    width: ${({ size }) => (size === 'sm' ? '10%' : '20%')};
+    padding-right: calc(0.2rem + 0.3vw);
   }
 `
 
 const SubHeading = styled.p`
   font-weight: 600;
-  font-size: calc(0.8rem + 0.3vw);
+  font-size: calc(0.7rem + 0.4vw);
   text-align: justify;
 `
 
 export const TimeText = ({ time, align, size }: TimeProps): ReactElement => (
-  <TimeContainer align={align} desktopWidth={size === 'sm' ? '7%' : '14%'}>
+  <TimeContainer align={align} size={size}>
     <SubHeading>{time}</SubHeading>
   </TimeContainer>
 )

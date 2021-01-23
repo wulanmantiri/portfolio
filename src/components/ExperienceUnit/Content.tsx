@@ -20,7 +20,7 @@ const ContentContainer = styled(Column)`
 const Heading = styled.h1<{
   align?: string
 }>`
-  font-size: calc(1rem + 0.4vw);
+  font-size: calc(0.9rem + 0.5vw);
   text-align: ${({ align }) => align || 'left'};
 `
 
@@ -28,7 +28,7 @@ const SubHeading = styled.p<{
   align?: string
 }>`
   font-weight: 600;
-  font-size: calc(0.9rem + 0.3vw);
+  font-size: calc(0.8rem + 0.4vw);
   text-align: ${({ align }) => align || 'left'};
   margin-top: 0.2rem;
 `

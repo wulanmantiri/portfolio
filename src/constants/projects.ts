@@ -88,10 +88,10 @@ export const PROJECTS = [
     ],
   },
   {
-    name: `Wulan's Personal Website`,
+    name: `Wulan's Portfolio`,
     description: `
-      Wulan's Personal Website is a display of my portfolio comprising
-      of the productive things I do here and there, built using React Typescript.
+      Wulan's Portfolio is a personal website displaying the recap of productive
+      things I have done, built using React Typescript.
     `,
     imageUrl:
       'https://drive.google.com/uc?export=view&id=1LiqXubEUmwLiYNli8Tb5LiFwhvD6DnId',

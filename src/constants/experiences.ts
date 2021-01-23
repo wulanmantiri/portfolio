@@ -32,8 +32,8 @@ export const EXPERIENCES_LIST = [
       `I collaborated in maintaining 9CV9 career platform, creating and improving features,
       revising admin management, resolving data inconsistency, and integrating with online
       platform partners using agile development with Django REST framework.
-      I automated user registration input by building a new Python-based CV parser to extract
-      information from PDF or Word document and web scraper to obtain data.
+      Furthermore, I automated user registration input by building a new Python-based resume parser
+      to extract information from PDF or Word document and web scraper to obtain data.
       I also improved user traffic by handling SEO from the backend side, creating a personality
       assessment and chat feature, which doubled the number of users to 2,000+ users.`,
     ],

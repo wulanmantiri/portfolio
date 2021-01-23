@@ -11,7 +11,7 @@ type Props = {
 }
 
 const Heading = styled.h1`
-  font-size: calc(1.5rem + 1.5vw);
+  font-size: calc(1.5rem + 1vw);
   font-weight: 500;
   font-family: ${({ theme }) => theme.fonts.heading};
   text-align: center;

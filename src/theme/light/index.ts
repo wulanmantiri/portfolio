@@ -9,9 +9,12 @@ const colors = {
   evenSection: '#FFFFFF',
   oddSection: '#F7F7F7',
   contrast: '#000000',
+  navbar: 'rgba(254, 254, 254, 0.7)',
+
+  // constant
   settings: '#292929',
   blue: '#1984EA',
-  navbar: 'rgba(254, 254, 254, 0.7)',
+  lightBlue: '#3d94fd',
 }
 
 const lightTheme: DefaultTheme = { colors, fonts }

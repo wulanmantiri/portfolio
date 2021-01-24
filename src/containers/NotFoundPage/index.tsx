@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 import { Layout, Section } from 'components'
-import { Center } from 'components/styled'
+import { Center, LeftToRightUnderline } from 'components/styled'
 
 const Container = styled(Center)`
   min-height: calc(100vh - 13.5rem - 2vw);
@@ -47,7 +47,11 @@ const NotFoundPage = (): ReactElement => (
           <LargeText>Page Not Found</LargeText>
         </Center>
         <RedirectText>
-          you seem lost. back to <StyledLink to="/">home</StyledLink>?
+          you seem lost. back to{' '}
+          <StyledLink to="/">
+            <LeftToRightUnderline>home</LeftToRightUnderline>
+          </StyledLink>
+          ?
         </RedirectText>
       </Container>
     </Section>

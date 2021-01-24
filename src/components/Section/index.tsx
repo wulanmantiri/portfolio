@@ -36,7 +36,7 @@ const Content = styled.div`
   width: 80%;
 
   @media (max-width: 600px) {
-    width: 88%;
+    width: 85%;
   }
 `
 

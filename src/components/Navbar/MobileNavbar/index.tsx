@@ -18,7 +18,7 @@ const PopupContainer = styled.div`
 `
 
 const NavContainer = styled(SpacedColumn)`
-  width: 95%;
+  width: 92%;
   align-items: flex-end;
 `
 

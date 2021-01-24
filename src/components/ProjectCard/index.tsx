@@ -18,7 +18,7 @@ type Props = {
 const Container = styled.div`
   position: relative;
   width: 45%;
-  margin-bottom: calc(3rem + 1vw);
+  margin-bottom: calc(2rem + 2.5vw);
 
   @media (max-width: 800px) {
     width: 100%;
@@ -32,14 +32,14 @@ const ProjectImage = styled.img<{
   z-index: 2;
   width: 100%;
   object-fit: cover;
-  padding: 1px;
   border: 0.5px solid ${({ theme }) => theme.colors.border};
   border-radius: 0.5rem;
   box-shadow: 1px 1px 3px ${({ theme }) => theme.colors.border};
 
   @media (min-width: 800px) {
     transition: 0.5s ease;
-    transform: ${({ hovered }) => (hovered ? 'translate(0, -3.9rem)' : '0')};
+    transform: ${({ hovered }) =>
+      hovered ? 'translate(0, calc(-2rem - 1.8vw))' : '0'};
   }
 `
 
@@ -48,7 +48,7 @@ const Placeholder = styled(SpacedColumn)`
   z-index: 1;
   bottom: 0;
   width: 100%;
-  padding: 0.2rem;
+  padding: calc(0.1rem + 0.2vw) 0.2rem;
 
   @media (max-width: 800px) {
     position: relative;
@@ -61,11 +61,11 @@ const Heading = styled.p`
 `
 
 const Description = styled.p`
-  font-size: 0.8rem;
+  font-size: calc(0.8rem + 0.1vw);
   text-align: justify;
 
-  @media (min-width: 1440px) {
-    font-size: 0.9rem;
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    font-size: 0.8rem;
   }
 `
 

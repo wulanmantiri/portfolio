@@ -10,9 +10,11 @@ declare module 'styled-components' {
       evenSection: string
       oddSection: string
       contrast: string
+      navbar: string
+
       settings: string
       blue: string
-      navbar: string
+      lightBlue: string
     }
     fonts: {
       heading: string

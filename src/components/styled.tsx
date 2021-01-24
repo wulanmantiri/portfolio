@@ -1,6 +1,13 @@
 import styled from 'styled-components'
 
-export { Row, SpacedRow, Column, SpacedColumn, Center }
+export {
+  Flex as Row,
+  SpacedRow,
+  Column,
+  SpacedColumn,
+  Center,
+  LeftToRightUnderline,
+}
 
 const Flex = styled.div<{
   align?: string
@@ -13,11 +20,7 @@ const Flex = styled.div<{
   width: ${({ width }) => width || 'auto'};
 `
 
-const Row = styled(Flex)`
-  flex-direction: row;
-`
-
-const SpacedRow = styled(Row)<{
+const SpacedRow = styled(Flex)<{
   spacing?: string
 }>`
   > *:not(style) ~ *:not(style) {
@@ -43,4 +46,30 @@ const Center = styled(Column)`
   justify-content: center;
   align-items: center;
   height: 100%;
+`
+
+const LeftToRightUnderline = styled.span<{
+  color?: string
+}>`
+  line-height: inherit;
+  vertical-align: inherit;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 15%;
+    height: 2px;
+    width: 0;
+    opacity: 0;
+    transition: width 0.4s ease-in-out, opacity 0.4s ease 0.5s;
+    background-color: ${({ theme, color }) => color || theme.colors.blue};
+  }
+
+  &:hover:after {
+    width: 100%;
+    opacity: 1;
+    transition: width 0.4s ease-in-out, opacity 0.1s ease;
+  }
 `

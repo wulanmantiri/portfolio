@@ -16,7 +16,6 @@ const TimeContainer = styled(Column)<{
 
   @media (max-width: 600px) {
     width: ${({ size }) => (size === 'sm' ? '10%' : '20%')};
-    padding-right: calc(0.2rem + 0.3vw);
   }
 `
 

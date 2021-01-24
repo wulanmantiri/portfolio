@@ -2,17 +2,21 @@ import React, { ReactElement } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-import { SpacedColumn } from 'components/styled'
+import { SpacedColumn, LeftToRightUnderline } from 'components/styled'
 import { PROFILE_PIC_URL } from 'constants/biodata'
 
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   min-height: calc(100vh - 10rem - 2vw);
 
   @media (max-width: 800px) {
     flex-direction: column;
+    justify-content: center;
+  }
+  @media (max-width: 600px) {
     justify-content: flex-start;
   }
 `
@@ -30,29 +34,34 @@ const ProfileImage = styled.img`
   }
 `
 
+const TextContainer = styled(SpacedColumn)`
+  width: 95%;
+  @media (min-width: 800px) {
+    width: 60%;
+  }
+`
+
 const Greetings = styled.p`
   font-family: ${({ theme }) => theme.fonts.heading};
   font-size: calc(1.2rem + 1.8vw);
+  text-align: center;
 `
 
 const Name = styled.p`
   font-family: ${({ theme }) => theme.fonts.heading};
   font-size: calc(2rem + 4vw);
+  text-align: center;
 `
 
 const Description = styled.p`
-  font-size: calc(1rem + 0.6vw);
+  font-size: calc(0.8rem + 0.8vw);
   font-weight: 600;
   text-align: center;
   line-height: 1.4;
   vertical-align: top;
-
-  @media (max-width: 600px) {
-    width: 85%;
-  }
 `
 
-const PsNote = styled.span`
+const PsNote = styled.p`
   font-size: calc(0.7rem + 0.3vw);
   text-align: center;
 `
@@ -72,22 +81,29 @@ const contactPath = {
 const About = (): ReactElement => (
   <Container>
     <ProfileImage alt="Wulan's Profile Picture" src={PROFILE_PIC_URL} />
-    <SpacedColumn align="center" spacing="5vh">
+    <TextContainer align="center" spacing="5vh">
       <SpacedColumn align="center" spacing="-0.8vw">
         <Greetings>{`hi, i'm`}</Greetings>
         <Name>wulan mantiri</Name>
       </SpacedColumn>
       <Description>
-        I am a full-time CS UI student and future full-stack developer.
-        <br />
-        Works aside, I love to travel and hunt down local cuisines.*
+        I am a CS UI student with keen interests towards full-stack web
+        development, functional programming, and artificial intelligence.
         <br />
         See the recap of what I have done by scrolling or clicking{' '}
-        <StyledLink to={contactPath}>here</StyledLink>.
+        <StyledLink to={contactPath}>
+          <LeftToRightUnderline>here</LeftToRightUnderline>
+        </StyledLink>
+        .
         <br />
-        <PsNote>*Well, the hobby stays dormant for now.</PsNote>
+        <br />
+        <PsNote>
+          Works aside, I love to travel and hunt down local cuisines.
+          <br />
+          Well, the hobby stays dormant for now.
+        </PsNote>
       </Description>
-    </SpacedColumn>
+    </TextContainer>
   </Container>
 )
 

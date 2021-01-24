@@ -7,8 +7,7 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    line-height: 1.1;
-    vertical-align: middle;
+    line-height: 1;
   }
 
   body {

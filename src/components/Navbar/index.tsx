@@ -24,7 +24,7 @@ const NavContainer = styled(Row)`
   align-items: center;
 
   @media (max-width: 600px) {
-    width: 90%;
+    width: 85%;
   }
 `
 

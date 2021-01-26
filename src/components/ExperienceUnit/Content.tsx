@@ -2,6 +2,7 @@ import React, { ReactElement } from 'react'
 import styled from 'styled-components'
 
 import { Column } from 'components/styled'
+import { generateHighlightedText } from 'utils/generateHighlightedText'
 
 type Props = {
   title: string
@@ -60,7 +61,7 @@ export const Content = ({
     {descriptions && (
       <DescriptionList>
         {descriptions.map((desc, id) => (
-          <Description key={id}>{desc}</Description>
+          <Description key={id}>{generateHighlightedText(desc)}</Description>
         ))}
       </DescriptionList>
     )}

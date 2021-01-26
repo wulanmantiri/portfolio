@@ -9,3 +9,7 @@ export const PHONE_URL = `tel:${WULANS_PHONE}`
 
 export const PROFILE_PIC_URL =
   'https://drive.google.com/uc?export=view&id=1pW2YTSBG9YRn3I44xY7osOV9mJEwvnNQ'
+export const WULANS_DESCRIPTION = `
+  I am a CS UI student with keen interests towards ##full-stack web
+  development##, ##functional programming##, and ##artificial intelligence##.
+`

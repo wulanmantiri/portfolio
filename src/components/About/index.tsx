@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 import { SpacedColumn, LeftToRightUnderline } from 'components/styled'
-import { PROFILE_PIC_URL } from 'constants/biodata'
+import { PROFILE_PIC_URL, WULANS_DESCRIPTION } from 'constants/biodata'
+import { generateHighlightedText } from 'utils/generateHighlightedText'
 
 const Container = styled.div`
   display: flex;
@@ -35,7 +36,6 @@ const ProfileImage = styled.img`
 `
 
 const TextContainer = styled(SpacedColumn)`
-  width: 95%;
   @media (min-width: 800px) {
     width: 60%;
   }
@@ -64,6 +64,7 @@ const Description = styled.p`
 const PsNote = styled.p`
   font-size: calc(0.7rem + 0.3vw);
   text-align: center;
+  font-weight: 600;
 `
 
 const StyledLink = styled(Link)`
@@ -87,22 +88,18 @@ const About = (): ReactElement => (
         <Name>wulan mantiri</Name>
       </SpacedColumn>
       <Description>
-        I am a CS UI student with keen interests towards full-stack web
-        development, functional programming, and artificial intelligence.
-        <br />
+        {generateHighlightedText(WULANS_DESCRIPTION)}
         See the recap of what I have done by scrolling or clicking{' '}
         <StyledLink to={contactPath}>
           <LeftToRightUnderline>here</LeftToRightUnderline>
         </StyledLink>
         .
-        <br />
-        <br />
-        <PsNote>
-          Works aside, I love to travel and hunt down local cuisines.
-          <br />
-          Well, the hobby stays dormant for now.
-        </PsNote>
       </Description>
+      <PsNote>
+        Works aside, I love to travel and hunt down local cuisines.
+        <br />
+        Well, the hobby stays dormant for now.
+      </PsNote>
     </TextContainer>
   </Container>
 )

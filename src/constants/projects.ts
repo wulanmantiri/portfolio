@@ -3,7 +3,7 @@ export const PROJECTS = [
     name: 'ChatApp',
     description: `
       ChatApp is a multi-person real-time chatting application with Google auth 
-      and read by feature, built with functional React Typescript and Elixir Phoenix.
+      and read by feature, built with functional ##React Typescript## and ##Elixir Phoenix##.
     `,
     imageUrl:
       'https://drive.google.com/uc?export=view&id=1wOq1BtWYyV8ixxg-nH-4TP6tXgVYds8_',
@@ -23,7 +23,7 @@ export const PROJECTS = [
     name: 'Fello!',
     description: `
       Fello is a web social media platform to connect fans with their favorite artists or
-      celebrities, built with React.js and Django REST framework.
+      celebrities, built with ##React.js## and ##Django REST framework##.
     `,
     imageUrl:
       'https://drive.google.com/uc?export=view&id=1tExcxEbg2FH5JrF9PbY7iBvgHQMnYL-T',
@@ -41,8 +41,8 @@ export const PROJECTS = [
   {
     name: 'Scoovid',
     description: `
-      Scoovid is an AI-powered, Django-based scheduling website for companies that runs on
-      Genetic Algorithm considering productivity and risk of COVID transmission.
+      Scoovid is an AI-powered, ##Django-based## scheduling website for companies that runs on
+      ##Genetic Algorithm## considering productivity and risk of COVID transmission.
     `,
     imageUrl:
       'https://drive.google.com/uc?export=view&id=1IE4BM_MsczciOwnq2n9mn1cieeoujWyS',
@@ -57,7 +57,7 @@ export const PROJECTS = [
     name: 'Chatatan',
     description: `
       Chatatan is a LINE bot application serving as a personal notes and schedule keeper
-      with a share feature, built with microservices and TDD using Spring and PostgreSQL.
+      with a share feature, built with microservices and TDD using ##Spring## and ##PostgreSQL##.
     `,
     websiteUrl: 'https://line.me/R/ti/p/%40045nhzyf',
     imageUrl:
@@ -77,7 +77,7 @@ export const PROJECTS = [
     name: 'Farmakami',
     description: `
       Farmakami is an online platform to perform medical purchases and transactions with four
-      user types, accessing data via raw SQL queries with Django and PostgreSQL.
+      user types, accessing data via raw SQL queries with ##Django## and ##PostgreSQL##.
     `,
     imageUrl:
       'https://drive.google.com/uc?export=view&id=14RAm4724-BEYQvWlo-zDmvVugibTcBOm',
@@ -91,7 +91,7 @@ export const PROJECTS = [
     name: `Wulan's Portfolio`,
     description: `
       Wulan's Portfolio is a personal website displaying the recap of productive
-      things I have done, built using React Typescript.
+      things I have done, built using ##React Typescript##.
     `,
     imageUrl:
       'https://drive.google.com/uc?export=view&id=1LiqXubEUmwLiYNli8Tb5LiFwhvD6DnId',

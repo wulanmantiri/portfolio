@@ -7,6 +7,7 @@ export {
   SpacedColumn,
   Center,
   LeftToRightUnderline,
+  Highlight,
 }
 
 const Flex = styled.div<{
@@ -72,4 +73,16 @@ const LeftToRightUnderline = styled.span<{
     opacity: 1;
     transition: width 0.4s ease-in-out, opacity 0.1s ease;
   }
+`
+
+const Highlight = styled.span<{
+  color?: string
+}>`
+  background-image: linear-gradient(
+    ${({ theme, color }) => color || theme.colors.highlightBlue},
+    ${({ theme, color }) => color || theme.colors.highlightBlue}
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 15%;
+  background-position: 0 80%;
 `

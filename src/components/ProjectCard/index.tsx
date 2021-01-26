@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import { Row, SpacedRow, SpacedColumn } from 'components/styled'
 import { CodeIcon } from 'components'
+import { generateHighlightedText } from 'utils/generateHighlightedText'
 
 type Props = {
   name: string
@@ -98,7 +99,7 @@ const ProjectCard = ({
             ))}
           </SpacedRow>
         </Row>
-        <Description>{description}</Description>
+        <Description>{generateHighlightedText(description)}</Description>
       </Placeholder>
     </Container>
   )

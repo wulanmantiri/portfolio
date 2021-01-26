@@ -1,4 +1,4 @@
-import React, { ReactElement, useContext, useEffect, useState } from 'react'
+import React, { ReactElement, useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 
 import {
@@ -15,6 +15,7 @@ import { useWindow, useMouseRef } from 'hooks'
 import { EXPERIENCES_LIST } from 'constants/experiences'
 import { ACHIEVEMENTS_LIST } from 'constants/achievements'
 import { LANDING_PAGE_SECTIONS } from 'constants/section'
+import { LoadContext } from 'store/LoadProvider'
 
 const LandingPage = (): ReactElement => {
   const theme = useContext(ThemeContext)
@@ -24,20 +25,7 @@ const LandingPage = (): ReactElement => {
   const { assignRef } = mouseRef
 
   const { isMobile } = useWindow()
-  const [isLoading, setIsLoading] = useState(false)
-
-  const handleLoad = () => setIsLoading(false)
-
-  useEffect(() => {
-    setIsLoading(true)
-  }, [setIsLoading])
-
-  useEffect(() => {
-    window.addEventListener('load', handleLoad)
-    return () => {
-      window.removeEventListener('load', handleLoad)
-    }
-  }, [])
+  const { isLoading } = useContext(LoadContext)
 
   return isLoading ? (
     <LoadingPage />

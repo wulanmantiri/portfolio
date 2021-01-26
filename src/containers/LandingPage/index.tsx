@@ -1,4 +1,4 @@
-import React, { ReactElement, useContext } from 'react'
+import React, { ReactElement, useContext, useEffect, useState } from 'react'
 import { ThemeContext } from 'styled-components'
 
 import {
@@ -10,6 +10,7 @@ import {
   ExperiencesList,
   ProjectsList,
 } from 'components'
+import { LoadingPage } from 'containers'
 import { useWindow, useMouseRef } from 'hooks'
 import { EXPERIENCES_LIST } from 'constants/experiences'
 import { ACHIEVEMENTS_LIST } from 'constants/achievements'
@@ -23,8 +24,24 @@ const LandingPage = (): ReactElement => {
   const { assignRef } = mouseRef
 
   const { isMobile } = useWindow()
+  const [isLoading, setIsLoading] = useState(false)
 
-  return (
+  const handleLoad = () => setIsLoading(false)
+
+  useEffect(() => {
+    setIsLoading(true)
+  }, [setIsLoading])
+
+  useEffect(() => {
+    window.addEventListener('load', handleLoad)
+    return () => {
+      window.removeEventListener('load', handleLoad)
+    }
+  }, [])
+
+  return isLoading ? (
+    <LoadingPage />
+  ) : (
     <Layout>
       {isMobile ? <></> : <Sidebar mouseRef={mouseRef} />}
       <Section

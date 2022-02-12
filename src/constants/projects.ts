@@ -10,11 +10,13 @@ export const PROJECTS = [
     repo: [
       {
         label: 'Mobile',
-        url: 'https://gitlab.cs.ui.ac.id/ppl-fasilkom-ui/2021/DD/pt-gizi-sehat-dietela/dietela-mobile',
+        url:
+          'https://gitlab.cs.ui.ac.id/ppl-fasilkom-ui/2021/DD/pt-gizi-sehat-dietela/dietela-mobile',
       },
       {
         label: 'BE',
-        url: 'https://gitlab.cs.ui.ac.id/ppl-fasilkom-ui/2021/DD/pt-gizi-sehat-dietela/dietela-backend',
+        url:
+          'https://gitlab.cs.ui.ac.id/ppl-fasilkom-ui/2021/DD/pt-gizi-sehat-dietela/dietela-backend',
       },
     ],
   },

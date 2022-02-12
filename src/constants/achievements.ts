@@ -1,5 +1,10 @@
 export const ACHIEVEMENTS_LIST = [
   {
+    title: 'Masterpiece Product',
+    time: 'Jul 2021',
+    place: 'CS UI Software Engineering Project',
+  },
+  {
     title: 'Champion',
     time: 'Aug 2020',
     place: 'OCBC NISP IDEATION Innovation Competition',

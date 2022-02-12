@@ -1,13 +1,31 @@
 export const PROJECTS = [
   {
+    name: 'Dietela',
+    description: `
+      Dietela is a mobile application that provides personalised diet and online nutritionist consultation services,
+      built with ##React Native##, ##Typescript##, and ##Django REST##.
+    `,
+    imageUrl:
+      'https://drive.google.com/uc?export=view&id=1tcsNoifanS0q7wV10CB5OcXifxYUdLCW',
+    repo: [
+      {
+        label: 'Mobile',
+        url: 'https://gitlab.cs.ui.ac.id/ppl-fasilkom-ui/2021/DD/pt-gizi-sehat-dietela/dietela-mobile',
+      },
+      {
+        label: 'BE',
+        url: 'https://gitlab.cs.ui.ac.id/ppl-fasilkom-ui/2021/DD/pt-gizi-sehat-dietela/dietela-backend',
+      },
+    ],
+  },
+  {
     name: 'ChatApp',
     description: `
       ChatApp is a multi-person real-time chatting application with Google auth 
-      and read by feature, built with functional ##React Typescript## and ##Elixir Phoenix##.
+      and read by feature, built with ##React Typescript## and ##Elixir Phoenix##.
     `,
     imageUrl:
       'https://drive.google.com/uc?export=view&id=1wOq1BtWYyV8ixxg-nH-4TP6tXgVYds8_',
-    websiteUrl: 'https://chatapp-pemfung.netlify.app/',
     repo: [
       {
         label: 'FE',
@@ -20,25 +38,6 @@ export const PROJECTS = [
     ],
   },
   {
-    name: 'Fello!',
-    description: `
-      Fello is a web social media platform to connect fans with their favorite artists or
-      celebrities, built with ##React.js## and ##Django REST framework##.
-    `,
-    imageUrl:
-      'https://drive.google.com/uc?export=view&id=1tExcxEbg2FH5JrF9PbY7iBvgHQMnYL-T',
-    repo: [
-      {
-        label: 'FE',
-        url: 'https://gitlab.com/rpl-b2/fello',
-      },
-      {
-        label: 'BE',
-        url: 'https://gitlab.com/rpl-b2/bello',
-      },
-    ],
-  },
-  {
     name: 'Scoovid',
     description: `
       Scoovid is an AI-powered, ##Django-based## scheduling website for companies that runs on
@@ -46,7 +45,6 @@ export const PROJECTS = [
     `,
     imageUrl:
       'https://drive.google.com/uc?export=view&id=1IE4BM_MsczciOwnq2n9mn1cieeoujWyS',
-    websiteUrl: 'https://scoovid.herokuapp.com/',
     repo: [
       {
         url: 'https://gitlab.com/sc-yok/scoovid',
@@ -74,20 +72,6 @@ export const PROJECTS = [
     ],
   },
   {
-    name: 'Farmakami',
-    description: `
-      Farmakami is an online platform to perform medical purchases and transactions with four
-      user types, accessing data via raw SQL queries with ##Django## and ##PostgreSQL##.
-    `,
-    imageUrl:
-      'https://drive.google.com/uc?export=view&id=14RAm4724-BEYQvWlo-zDmvVugibTcBOm',
-    repo: [
-      {
-        url: 'https://gitlab.com/kel-31-basdat-c/farmakami/',
-      },
-    ],
-  },
-  {
     name: `Wulan's Portfolio`,
     description: `
       Wulan's Portfolio is a personal website displaying the recap of productive
@@ -95,7 +79,6 @@ export const PROJECTS = [
     `,
     imageUrl:
       'https://drive.google.com/uc?export=view&id=1LiqXubEUmwLiYNli8Tb5LiFwhvD6DnId',
-    websiteUrl: 'https://wulanmantiri.netlify.app/',
     repo: [
       {
         url: 'https://github.com/wulanmantiri/portfolio',

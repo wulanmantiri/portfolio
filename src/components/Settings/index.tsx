@@ -18,6 +18,7 @@ const StyledBox = styled(Center)`
   height: 35px;
   border-radius: 0.5rem;
   box-shadow: 0.5px 0.5px 3px ${({ theme }) => theme.colors.sidebar};
+  cursor: pointer;
 `
 
 const PopupContainer = styled(Center)`
@@ -58,8 +59,8 @@ const Settings = (): ReactElement => {
 
   return (
     <FixedContainer>
-      <StyledBox>
-        <TripleLineIcon clicked={opened} setClicked={setOpened} />
+      <StyledBox onClick={() => setOpened(!opened)}>
+        <TripleLineIcon clicked={opened} />
       </StyledBox>
       {opened && (
         <PopupContainer>

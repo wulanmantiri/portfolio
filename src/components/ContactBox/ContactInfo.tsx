@@ -17,7 +17,7 @@ const StyledLink = styled.a`
   display: flex;
   align-items: center;
   height: 2.5rem;
-  padding: 0 2rem 0 1rem;
+  padding: 0 1.5rem 0 1rem;
   color: ${({ theme }) => theme.colors.secondary};
   background: linear-gradient(
       to left,
@@ -26,7 +26,8 @@ const StyledLink = styled.a`
     )
     right;
   background-size: 200%;
-  transition: background 0.5s ease-out, color 0.3s;
+  transition: background 0.8s ease-out, color 0.3s;
+  border-radius: 0 5px 5px 0;
 
   &:hover {
     color: ${({ theme }) => theme.colors.blue};
@@ -53,8 +54,8 @@ export const ContactInfo = ({
       href={url}
       target="_blank"
       rel="noreferrer"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseOver={() => setHovered(true)}
+      onMouseOut={() => setHovered(false)}
     >
       {LeftIcon && (
         <SpacedRow align="center" spacing="1.2rem">

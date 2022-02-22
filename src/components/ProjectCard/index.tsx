@@ -10,7 +10,7 @@ type Props = {
   description: string
   imageUrl: string
   websiteUrl?: string
-  repo: {
+  repo?: {
     label?: string
     url: string
   }[]
@@ -91,12 +91,13 @@ const ProjectCard = ({
         <Row justify="space-between" width="100%" align="center">
           <Heading>{name}</Heading>
           <SpacedRow align="center">
-            {repo.map((r, idx) => (
-              <SpacedRow key={idx} align="center" spacing="0.2rem">
-                {r.label && <Description>{r.label}:</Description>}
-                <CodeIcon url={r.url} />
-              </SpacedRow>
-            ))}
+            {repo &&
+              repo.map((r, idx) => (
+                <SpacedRow key={idx} align="center" spacing="0.2rem">
+                  {r.label && <Description>{r.label}:</Description>}
+                  <CodeIcon url={r.url} />
+                </SpacedRow>
+              ))}
           </SpacedRow>
         </Row>
         <Description>{generateHighlightedText(description)}</Description>

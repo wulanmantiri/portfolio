@@ -36,7 +36,7 @@ const Content = styled.div`
 const Footer = (): ReactElement => (
   <Container>
     <Content>
-      <p>2021 - Wulan Mantiri</p>
+      <p>2022 - Wulan Mantiri</p>
       <SpacedRow spacing="1.2rem" align="center">
         <a
           href={EMAIL_URL}

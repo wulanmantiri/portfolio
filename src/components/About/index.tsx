@@ -84,7 +84,7 @@ const About = (): ReactElement => (
     <ProfileImage alt="Wulan's Profile Picture" src={PROFILE_PIC_URL} />
     <TextContainer align="center" spacing="5vh">
       <SpacedColumn align="center" spacing="-0.8vw">
-        <Greetings>{`hi, i'm`}</Greetings>
+        <Greetings>{`hi, i am`}</Greetings>
         <Name>wulan mantiri</Name>
       </SpacedColumn>
       <Description>

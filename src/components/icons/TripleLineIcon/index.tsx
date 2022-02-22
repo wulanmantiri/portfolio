@@ -5,7 +5,7 @@ import { SpacedColumn } from 'components/styled'
 
 type Props = {
   clicked: boolean
-  setClicked: (c: boolean) => void
+  setClicked?: (c: boolean) => void
 }
 
 const Container = styled(SpacedColumn)`
@@ -25,7 +25,10 @@ const Line = styled.div<{
   transition: all 0.4s;
 `
 
-const TripleListIcon = ({ clicked, setClicked }: Props): ReactElement => (
+const TripleListIcon = ({
+  clicked,
+  setClicked = () => null,
+}: Props): ReactElement => (
   <Container spacing="5px" onClick={() => setClicked(!clicked)}>
     <Line
       transform={clicked ? 'rotate(-45deg) translate(-5px, 4px)' : '0'}

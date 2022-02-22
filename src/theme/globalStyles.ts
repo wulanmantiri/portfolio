@@ -19,6 +19,21 @@ export const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  html {
+    scrollbar-color: ${({ theme }) => theme.colors.highlightBlue} ${({
+  theme,
+}) => theme.colors.oddSection};
+    scrollbar-width: thin;
+  }
+  body::-webkit-scrollbar {
+    width: 8px;
+    background-color: ${({ theme }) => theme.colors.oddSection};
+  }
+  body::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: ${({ theme }) => theme.colors.highlightBlue};
+  }
+
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;

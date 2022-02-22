@@ -22,7 +22,6 @@ const StyledLink = styled(Link)`
       transform: scale3d(1.05, 1.05, 1);
       transform-style: preserve-3d;
       background-color: ${({ theme }) => theme.colors.oddSection};
-      border: 1px solid ${({ theme }) => theme.colors.border};
       border-radius: 0.5rem;
       padding: 0.4rem 0.7rem;
       box-shadow: 2px 2px 4px ${({ theme }) => theme.colors.border};

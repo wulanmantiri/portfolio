@@ -6,7 +6,7 @@ export const PROJECTS = [
       built with ##React Native##, ##Typescript##, and ##Django REST##.
     `,
     imageUrl:
-      'https://drive.google.com/uc?export=view&id=1tcsNoifanS0q7wV10CB5OcXifxYUdLCW',
+      'https://drive.google.com/uc?export=view&id=10Ms3pKAVNN6Vc0rjVIviovDtFuN7JAWG',
     repo: [
       {
         label: 'Mobile',
@@ -24,7 +24,7 @@ export const PROJECTS = [
     name: 'ChatApp',
     description: `
       ChatApp is a multi-person real-time chatting application with Google auth 
-      and read by feature, built with ##React Typescript## and ##Elixir Phoenix##.
+      and read-by feature, built with ##React Typescript## and ##Elixir Phoenix##.
     `,
     imageUrl:
       'https://drive.google.com/uc?export=view&id=1wOq1BtWYyV8ixxg-nH-4TP6tXgVYds8_',
@@ -36,6 +36,25 @@ export const PROJECTS = [
       {
         label: 'BE',
         url: 'https://gitlab.cs.ui.ac.id/kelompok-pemfung/chatapp',
+      },
+    ],
+  },
+  {
+    name: 'Requirements Gatherer',
+    description: `
+      Requirements Gatherer is a one-stop application for organizations to define software project 
+      requests and requirements from clients, built with ##React.js## and ##Django REST##.
+    `,
+    imageUrl:
+      'https://drive.google.com/uc?export=view&id=16jYn_f0J8w2pmI1IBlPRmeZ44o7m1zPH',
+    repo: [
+      {
+        label: 'FE',
+        url: 'https://gitlab.com/pti-bemcsui/hera',
+      },
+      {
+        label: 'BE',
+        url: 'https://gitlab.com/pti-bemcsui/zeus',
       },
     ],
   },
@@ -54,12 +73,30 @@ export const PROJECTS = [
     ],
   },
   {
+    name: 'Dorakula',
+    description: `
+      Dorakula is a web application that handles donor registry and management for
+      the Indonesian Red Cross Society, built with ##React.js## and ##Django REST##.
+    `,
+    imageUrl:
+      'https://drive.google.com/uc?export=view&id=1Zni28xJS-xTqAoitM9lbFYC_woZ18_wB',
+    repo: [
+      {
+        label: 'FE',
+        url: 'https://gitlab.com/pti-bemcsui/artemis',
+      },
+      {
+        label: 'BE',
+        url: 'https://gitlab.com/pti-bemcsui/apollo',
+      },
+    ],
+  },
+  {
     name: 'Chatatan',
     description: `
       Chatatan is a LINE bot application serving as a personal notes and schedule keeper
       with a share feature, built with microservices and TDD using ##Spring## and ##PostgreSQL##.
     `,
-    websiteUrl: 'https://line.me/R/ti/p/%40045nhzyf',
     imageUrl:
       'https://drive.google.com/uc?export=view&id=1spvq1uKSanSv4WJoykwWPu7KJhAe_jec',
     repo: [

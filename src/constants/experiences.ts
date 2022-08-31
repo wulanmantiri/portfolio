@@ -1,7 +1,7 @@
 export const EXPERIENCES_LIST = [
   {
     title: 'Software Engineer Intern - Mobile',
-    time: 'Mar 2022 - present',
+    time: 'Mar 2022 - Jul 2022',
     place: 'Traveloka (Tangerang, Indonesia)',
   },
   {
@@ -21,7 +21,7 @@ export const EXPERIENCES_LIST = [
   },
   {
     title: 'Teaching and Lab Assistant',
-    time: 'Sep 2019 - present',
+    time: 'Sep 2019 - Jun 2022',
     place: 'University of Indonesia (Depok, Indonesia)',
   },
 ]

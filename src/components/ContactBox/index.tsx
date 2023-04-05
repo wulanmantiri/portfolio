@@ -10,6 +10,7 @@ import {
   RESUME_URL,
   EMAIL_URL,
   PHONE_URL,
+  WULANS_COUNTRY_CODE,
 } from 'constants/biodata'
 import { ContactInfo } from './ContactInfo'
 
@@ -51,7 +52,11 @@ const ContactBox = (): ReactElement => (
       <SpacedColumn spacing="0.5rem">
         <SubHeading>contact me via</SubHeading>
         <ContactInfo url={EMAIL_URL} LeftIcon={EmailIcon} text={WULANS_EMAIL} />
-        <ContactInfo url={PHONE_URL} LeftIcon={PhoneIcon} text={WULANS_PHONE} />
+        <ContactInfo
+          url={PHONE_URL}
+          LeftIcon={PhoneIcon}
+          text={`${WULANS_COUNTRY_CODE} ${WULANS_PHONE}`}
+        />
       </SpacedColumn>
       <SpacedColumn spacing="0.5rem" width="calc(7rem + 8vw)">
         <SubHeading>see my profile in</SubHeading>

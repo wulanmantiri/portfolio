@@ -1,5 +1,10 @@
 export const EXPERIENCES_LIST = [
   {
+    title: 'Software Engineer - Backend',
+    time: 'Nov 2022 - present',
+    place: 'Pelago (Singapore, Singapore)',
+  },
+  {
     title: 'Software Engineer - Frontend',
     time: 'Sep 2022 (canceled)',
     place: 'Sea (Singapore, Singapore)',

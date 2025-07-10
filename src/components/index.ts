@@ -2,7 +2,10 @@ export * from './icons'
 
 export { default as About } from './About'
 export { default as ContactBox } from './ContactBox'
-export { default as ExperienceUnit } from './ExperienceUnit'
+export {
+  default as ExperienceUnit,
+  AnimatedExperienceUnit,
+} from './ExperienceUnit'
 export { default as ExperiencesList } from './ExperiencesList'
 export { default as Footer } from './Footer'
 export { default as Layout } from './Layout'

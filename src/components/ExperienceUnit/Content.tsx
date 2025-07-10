@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { Column } from 'components/styled'
 import { generateHighlightedText } from 'utils/generateHighlightedText'
@@ -67,3 +67,23 @@ export const Content = ({
     )}
   </ContentContainer>
 )
+
+// Animated version
+export const AnimatedContent = styled(Content)<{
+  isVisible: boolean
+  delay?: number
+  isRight?: boolean
+}>`
+  opacity: 0;
+  transform: ${({ isRight }) =>
+    isRight ? 'translateX(30px)' : 'translateX(-30px)'};
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition-delay: ${({ delay }) => delay || 0}ms;
+
+  ${({ isVisible }) =>
+    isVisible &&
+    css`
+      opacity: 1;
+      transform: translateX(0);
+    `}
+`
